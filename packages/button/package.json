@@ -1,17 +1,21 @@
 {
     "name": "@thesis-ui/button",
+    "description": "Thesis UI - Button component",
     "version": "0.0.1",
     "license": "MIT",
     "author": "Geza-Tamas Kovacs <kovacs.geza.tamas@gmail.com>",
     "homepage": "https://github.com/kovacsgezatamas/thesis",
     "main": "src/index.js",
     "files": [
-        "src"
+         "src"
     ],
     "repository": {
         "directory": "packages/button",
-        "type": "git",
+    "type": "git",
         "url": "git@github.com:kovacsgezatamas/thesis.git"
+    },
+    "dependencies": {
+        "@thesis-ui/constants": "0.0.1"
     },
     "peerDependencies": {
         "react": "17.0.1",
