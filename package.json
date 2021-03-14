@@ -1,7 +1,23 @@
 {
-  "name": "root",
+  "name": "thesis-us",
   "private": true,
   "devDependencies": {
-    "lerna": "^4.0.0"
+    "@babel/core": "7.13.10",
+    "@storybook/addon-actions": "6.1.21",
+    "@storybook/addon-essentials": "6.1.21",
+    "@storybook/addon-links": "6.1.21",
+    "@storybook/react": "6.1.21",
+    "babel-loader": "8.2.2",
+    "lerna": "4.0.0",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
+    "styled-components": "5.2.1"
+  },
+  "dependencies": {},
+  "scripts": {
+    "build": "yarn -v",
+    "build:dev": "yarn -v",
+    "build:storybook": "build-storybook",
+    "start:storybook": "start-storybook -p 6006"
   }
 }

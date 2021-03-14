@@ -1,0 +1,21 @@
+{
+    "name": "@thesis-ui/button",
+    "version": "0.0.1",
+    "license": "MIT",
+    "author": "Geza-Tamas Kovacs <kovacs.geza.tamas@gmail.com>",
+    "homepage": "https://github.com/kovacsgezatamas/thesis",
+    "main": "src/index.js",
+    "files": [
+        "src"
+    ],
+    "repository": {
+        "directory": "packages/button",
+        "type": "git",
+        "url": "git@github.com:kovacsgezatamas/thesis.git"
+    },
+    "peerDependencies": {
+        "react": "17.0.1",
+        "react-dom": "17.0.1",
+        "styled-components": "5.2.1"
+    }
+}
