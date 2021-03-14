@@ -1,0 +1,13 @@
+import { Meta, Story } from '@storybook/addon-docs/blocks';
+import { color, typography, spacing } from '../src';
+
+<Meta title="Components/Constants/Values" />
+
+<div>
+  {Object.keys(color).map(colorKey => (
+    <div>
+      <div style={{ width: '40px', height: '40px', background: color[colorKey] }} />
+      <div>color.{colorKey} {color[colorKey]}</div>
+    </div>
+  ))}
+</div>

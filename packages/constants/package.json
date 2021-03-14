@@ -1,18 +1,18 @@
 {
-    "name": "@thesis-ui/constants",
-    "description": "Thesis UI - Constants",
-    "version": "0.0.1",
-    "license": "MIT",
-    "author": "Geza-Tamas Kovacs <kovacs.geza.tamas@gmail.com>",
-    "homepage": "https://github.com/kovacsgezatamas/thesis",
-    "main": "src/index.js",
-    "files": [
-        "src"
-    ],
-    "repository": {
-        "directory": "packages/constants",
-        "type": "git",
-        "url": "git@github.com:kovacsgezatamas/thesis.git"
-    },
-    "peerDependencies": {}
+  "name": "@thesis-ui/constants",
+  "description": "Thesis UI - Constants",
+  "version": "0.0.1",
+  "license": "MIT",
+  "author": "Geza-Tamas Kovacs <kovacs.geza.tamas@gmail.com>",
+  "homepage": "https://github.com/kovacsgezatamas/thesis",
+  "main": "src/index.js",
+  "files": [
+    "src"
+  ],
+  "repository": {
+    "directory": "packages/constants",
+    "type": "git",
+    "url": "git@github.com:kovacsgezatamas/thesis.git"
+  },
+  "peerDependencies": {}
 }
