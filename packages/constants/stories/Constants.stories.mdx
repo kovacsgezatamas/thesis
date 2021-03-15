@@ -1,13 +1,18 @@
 import { Meta, Story } from '@storybook/addon-docs/blocks';
+
 import { color, typography, spacing } from '../src';
+import { baseColors, grayscaleColors, baseAccents, grayscaleAccents } from '../src/color';
+
+import Asd from './Asd';
+import * as Styled from '../../../.storybook/styled'
 
 <Meta title="Components/Constants/Values" />
 
 <div>
   {Object.keys(color).map(colorKey => (
-    <div>
+    <Styled.ColorContainer>
       <div style={{ width: '40px', height: '40px', background: color[colorKey] }} />
       <div>color.{colorKey} {color[colorKey]}</div>
-    </div>
+    </Styled.ColorContainer>
   ))}
 </div>
