@@ -8,8 +8,8 @@ function getAccentColors(colorPalette, accentNumbers) {
 
     for (const accent of accentNumbers) {
       const accentPercentage = accent / 100;
-      accentColors[`${name}Lighten${accent}`] = lighten(accentPercentage, hex);
-      accentColors[`${name}Darken${accent}`] = darken(accentPercentage, hex);
+      accentColors[`${name}Light${accent}`] = lighten(accentPercentage, hex).toUpperCase();
+      accentColors[`${name}Dark${accent}`] = darken(accentPercentage, hex).toUpperCase();
     }
   }
 
@@ -28,11 +28,11 @@ const baseColors = [
 ];
 
 const grayscaleColors = [
-  { name: 'gray', hex: '#666' },
+  { name: 'gray', hex: '#888' },
   { name: 'silver', hex: '#C0C0C0' },
 ];
 
-const baseAccents = [5, 10, 15];
+const baseAccents = [5, 10, 20];
 const grayscaleAccents = [10, 15, 20, 25, 30, 35, 45];
 
 const color = {

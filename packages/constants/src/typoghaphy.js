@@ -1,14 +1,13 @@
 const fontFamily = 'Roboto';
 
 const fontSize = {
-  xxs: '1px',
-  xs: '2px',
-  sm: '4px',
-  md: '8px',
-  lg: '12px',
-  xl: '16px',
-  xxl: '24px',
-  xxxl: '36px',
+  xs: '8px',
+  sm: '12px',
+  md: '14px',
+  lg: '20px',
+  xl: '24px',
+  xxl: '32px',
+  xxxl: '40px',
 }
 
 const lineHeight = {

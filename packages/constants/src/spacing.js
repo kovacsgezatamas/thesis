@@ -1,12 +1,13 @@
 const spacing = {
-  xxs: '1px',
-  xs: '2px',
-  sm: '4px',
-  md: '8px',
-  lg: '12px',
-  xl: '16px',
-  xxl: '24px',
-  xxxl: '36px',
+  xxxs: '1px',
+  xxs: '2px',
+  xs: '4px',
+  sm: '8px',
+  md: '12px',
+  lg: '16px',
+  xl: '24px',
+  xxl: '36px',
+  xxxl: '48px',
 };
 
 export default spacing;
