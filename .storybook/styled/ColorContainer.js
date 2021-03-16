@@ -8,8 +8,8 @@ const ColorContainer = styled.div.attrs(() => ({
   box-sizing: border-box;
   display: flex;
   align-items: center;
-  width: 280px;
-  margin: ${spacing.sm} 0;
+  width: 300px;
+  margin: ${spacing.md} 0;
 `;
 
 export default ColorContainer;

@@ -1,7 +1,17 @@
+import MainContainer from './MainContainer';
 import ColorContainer from './ColorContainer';
 import ColorCircle from './ColorCircle';
 import ColorValue from './ColorValue';
 import ColorSeparator from './ColorSeparator';
-import MainContainer from './MainContainer';
+import TokenName from './TokenName';
+import TokenValue from './TokenValue';
 
-export { ColorContainer, ColorCircle, ColorValue, ColorSeparator, MainContainer };
+export {
+  MainContainer,
+  ColorContainer,
+  ColorCircle,
+  ColorValue,
+  ColorSeparator,
+  TokenName,
+  TokenValue,
+};

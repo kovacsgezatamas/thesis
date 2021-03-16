@@ -1,6 +1,6 @@
 import color from './color';
 import spacing from './spacing';
-import { fontFamily, fontSize, lineHeight } from './typoghaphy';
+import { fontFamily, fontSize, lineHeight, fontWeight } from './typoghaphy';
 
 export {
   color,
@@ -8,4 +8,5 @@ export {
   fontFamily,
   fontSize,
   lineHeight,
+  fontWeight,
 };

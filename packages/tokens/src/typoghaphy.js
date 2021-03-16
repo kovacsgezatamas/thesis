@@ -17,8 +17,19 @@ const lineHeight = {
   xl: 2.4,
 };
 
+const fontWeight = {
+  xs: 200,
+  sm: 300,
+  md: 400,
+  lg: 600,
+  xl: 700,
+  xxl: 800,
+  xxxl: 900,
+};
+
 export {
   fontFamily,
   fontSize,
   lineHeight,
+  fontWeight,
 };

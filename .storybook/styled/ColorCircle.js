@@ -8,7 +8,7 @@ const ColorCircle = styled.div.attrs(() => ({
   width: 48px;
   height: 48px;
   border-radius: 24px;
-  margin-right: ${spacing.md};
+  margin-right: ${spacing.lg};
   border: ${({ hasBorder }) => hasBorder ? `2px solid ${color.grayDark15}` : '0 none'};
   background: ${({ background }) => background};
 `;

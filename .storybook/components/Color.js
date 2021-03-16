@@ -9,7 +9,7 @@ function Color({ name }) {
     <Styled.ColorContainer>
       <Styled.ColorCircle background={color[name]} hasBorder={name === 'white'} />
       <Box>
-        <Styled.ColorValue>{name}</Styled.ColorValue>
+        <Styled.ColorValue isName>{name}</Styled.ColorValue>
         <Styled.ColorValue>{color[name]}</Styled.ColorValue>
       </Box>
     </Styled.ColorContainer>

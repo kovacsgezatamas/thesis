@@ -1,4 +1,4 @@
-import { Flex, Box } from 'rebass/styled-components';
+import { Flex } from 'rebass/styled-components';
 
 import { baseColors, grayscaleColors, baseAccents, grayscaleAccents } from '../src/color';
 

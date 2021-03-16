@@ -33,7 +33,7 @@ const grayscaleColors = [
 ];
 
 const baseAccents = [5, 10, 20];
-const grayscaleAccents = [10, 15, 20, 25, 30, 35, 45];
+const grayscaleAccents = [10, 15, 20, 25, 30, 35, 40, 45];
 
 const color = {
   white: '#FFF',
