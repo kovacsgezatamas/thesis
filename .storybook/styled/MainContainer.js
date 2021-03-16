@@ -6,7 +6,7 @@ import {
   fontFamily,
   fontSize,
   lineHeight
-} from '../../packages/constants/src';
+} from '../../packages/tokens/src';
 
 const MainContainer = styled.div.attrs(() => ({
   'data-test-id': 'SB_MAIN_CONTAINER',

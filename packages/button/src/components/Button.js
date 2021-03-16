@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { color } from '@thesis-ui/constants';
+import { color } from '@thesis-ui/tokens';
 
 function Button({ children, ...rest }) {
   return (

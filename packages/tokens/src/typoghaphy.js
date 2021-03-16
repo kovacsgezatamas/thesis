@@ -1,4 +1,4 @@
-const fontFamily = 'Roboto';
+const fontFamily = 'Nunito, sans-serif';
 
 const fontSize = {
   xs: '8px',

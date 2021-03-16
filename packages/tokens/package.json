@@ -1,5 +1,5 @@
 {
-  "name": "@thesis-ui/constants",
+  "name": "@thesis-ui/tokens",
   "description": "Thesis UI - Constants",
   "version": "0.0.1",
   "license": "MIT",
@@ -10,7 +10,7 @@
     "src"
   ],
   "repository": {
-    "directory": "packages/constants",
+    "directory": "packages/tokens",
     "type": "git",
     "url": "git@github.com:kovacsgezatamas/thesis.git"
   },

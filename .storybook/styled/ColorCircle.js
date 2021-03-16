@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { color, spacing } from '../../packages/constants/src';
+import { color, spacing } from '../../packages/tokens/src';
 
 const ColorCircle = styled.div.attrs(() => ({
   'data-test-id': 'SB_COLOR_CIRCLE',

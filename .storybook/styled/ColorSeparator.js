@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { spacing, color } from '../../packages/constants/src';
+import { spacing, color } from '../../packages/tokens/src';
 
 const ColorSeparator = styled.div.attrs(() => ({
   'data-test-id': 'SB_COLOR_SEPARATOR',

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { color } from '../../packages/constants/src';
+import { color } from '../../packages/tokens/src';
 
 const ColorValue = styled.div.attrs(() => ({
   'data-test-id': 'SB_COLOR_VALUE',

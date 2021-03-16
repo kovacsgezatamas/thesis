@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { spacing } from '../../packages/constants/src';
+import { spacing } from '../../packages/tokens/src';
 
 const ColorContainer = styled.div.attrs(() => ({
   'data-test-id': 'SB_COLOR_CONTAINER',
@@ -9,7 +9,7 @@ const ColorContainer = styled.div.attrs(() => ({
   display: flex;
   align-items: center;
   width: 280px;
-  margin: ${spacing.lg} 0;
+  margin: ${spacing.sm} 0;
 `;
 
 export default ColorContainer;

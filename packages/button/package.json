@@ -15,7 +15,7 @@
     "url": "git@github.com:kovacsgezatamas/thesis.git"
   },
   "dependencies": {
-    "@thesis-ui/constants": "0.0.1"
+    "@thesis-ui/tokens": "0.0.1"
   },
   "peerDependencies": {
     "react": "17.0.1",

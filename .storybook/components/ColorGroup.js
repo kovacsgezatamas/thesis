@@ -1,14 +1,15 @@
+import React from 'react';
 import { Box } from 'rebass/styled-components';
 
-import { color } from '../../packages/constants/src';
+import { color } from '../../packages/tokens/src';
 
 import Color from './Color';
 import * as Styled from '../styled'
 
 function ColorGroup({ colors, accents }) {
   return colors.map(({ name: baseName }) => (
-    <>
-      <Color name={baseName} />
+    <React.Fragment key={`${baseName}Group`}>
+      <Color key={baseName} name={baseName} />
 
       <Box width="100%" />
 
@@ -20,15 +21,16 @@ function ColorGroup({ colors, accents }) {
           return null;
         }
 
-        return <Color name={colorName} />;
+        return <Color name={colorName} key={colorName} />;
       })}
 
-      {accents.map(accent => (
-        <Color name={`${baseName}Dark${accent}`} />
-      ))}
+      {accents.map(accent => {
+        const colorName = `${baseName}Dark${accent}`;
+        return <Color name={colorName} key={colorName} />;
+      })}
 
       <Styled.ColorSeparator />
-    </>
+    </React.Fragment>
   ));
 }
 
