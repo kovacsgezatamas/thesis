@@ -2,12 +2,11 @@ import { fontFamily, fontSize, lineHeight, spacing, color } from '@thesis-ui/tok
 
 const button = {
   fontFamily: fontFamily,
-  largeFontSize: fontSize.md,
-  smallFontSize: fontSize.md,
+  fontSize: fontSize.md,
   lineHeight: lineHeight.md,
-  borderRadius: spacing.lg,
 
-  largePadding: `${spacing.sm} ${spacing.lg}`,
+  borderRadius: spacing.lg,
+  padding: `${spacing.sm} ${spacing.lg}`,
   smallPadding: `${spacing.xs} ${spacing.md}`,
 
   primaryColor: color.skyBlueLight20,

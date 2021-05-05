@@ -5,11 +5,12 @@ import { button as theme } from '@thesis-ui/theme';
 const Button = styled.button.attrs(() => ({
   'data-test-id': 'BUTTON',
 }))`
+  box-sizing: border-box;
   font-family: ${theme.fontFamily};
-  font-size: ${({ isSmall }) => isSmall ? theme.smallFontSize : theme.largeFontSize};
+  font-size: ${theme.fontSize};
   line-height: ${theme.lineHeight};
   border-radius: ${theme.borderRadius};
-  padding: ${({ isSmall }) => isSmall ? theme.smallPadding : theme.largePadding};
+  padding: ${({ isSmall }) => isSmall ? theme.smallPadding : theme.padding};
   color: ${({ isSecondary }) => isSecondary ? theme.secondaryColor : theme.primaryColor};
   background: ${({ isSecondary }) => isSecondary ? theme.secondaryBackground : theme.primaryBackground};
   border: ${theme.border};
