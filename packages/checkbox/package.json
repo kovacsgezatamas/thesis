@@ -1,0 +1,26 @@
+{
+  "name": "@thesis-ui/checkbox",
+  "description": "Thesis UI - Checkbox component",
+  "version": "0.0.1",
+  "license": "MIT",
+  "author": "Geza-Tamas Kovacs <kovacs.geza.tamas@gmail.com>",
+  "homepage": "https://github.com/kovacsgezatamas/thesis",
+  "main": "src/index.js",
+  "files": [
+    "src"
+  ],
+  "repository": {
+    "directory": "packages/checkbox",
+  "type": "git",
+    "url": "git@github.com:kovacsgezatamas/thesis.git"
+  },
+  "dependencies": {
+    "@thesis-ui/theme": "0.0.1",
+    "@thesis-ui/tokens": "0.0.1"
+  },
+  "peerDependencies": {
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
+    "styled-components": "5.2.1"
+  }
+}
