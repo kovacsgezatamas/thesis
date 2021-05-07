@@ -5,7 +5,7 @@ import { StaticTooltip } from '../src';
 import { SAMPLE_LONG_TEXT, SAMPLE_SHORT_TEXT } from '../../../.storybook/constants';
 
 export default {
-  title: 'Components/Tooltip',
+  title: 'Components/Tooltip/StaticTooltip',
   component: StaticTooltip,
 };
 
@@ -16,7 +16,7 @@ StaticTooltipComponent.args = {
   children: SAMPLE_SHORT_TEXT,
 };
 
-export const StaticTooltipLongText = StaticTooltipTemplate.bind({});
-StaticTooltipLongText.args = {
+export const StaticLongText = StaticTooltipTemplate.bind({});
+StaticLongText.args = {
   children: SAMPLE_LONG_TEXT,
 };

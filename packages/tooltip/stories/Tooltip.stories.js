@@ -4,7 +4,7 @@ import Tooltip from '../src';
 import Button from '../../button/src';
 
 import TooltipHelper from './styled/TooltipHelper';
-import { SAMPLE_LONG_TEXT, SAMPLE_SHORT_TEXT } from '../../../.storybook/constants';
+import { SAMPLE_SHORT_TEXT } from '../../../.storybook/constants';
 
 export default {
   title: 'Components/Tooltip',
@@ -23,20 +23,20 @@ const TooltipTemplate = (args) => (
   </TooltipHelper>
 );
 
-export const OpenTooltipComponent = TooltipTemplate.bind({});
-OpenTooltipComponent.args = {
-  title: SAMPLE_SHORT_TEXT.substr(0, 100),
-  isAlwaysOpen: true,
-};
-
-export const BottomOpenTooltipComponent = TooltipTemplate.bind({});
-BottomOpenTooltipComponent.args = {
-  title: SAMPLE_SHORT_TEXT.substr(0, 100),
-  isAlwaysOpen: true,
-  position: 'bottom',
-};
-
 export const TooltipComponent = TooltipTemplate.bind({});
 TooltipComponent.args = {
   title: SAMPLE_SHORT_TEXT.substr(0, 100),
+};
+
+export const Open = TooltipTemplate.bind({});
+Open.args = {
+  title: SAMPLE_SHORT_TEXT.substr(0, 100),
+  isAlwaysOpen: true,
+};
+
+export const BottomOpen = TooltipTemplate.bind({});
+BottomOpen.args = {
+  title: SAMPLE_SHORT_TEXT.substr(0, 100),
+  isAlwaysOpen: true,
+  position: 'bottom',
 };

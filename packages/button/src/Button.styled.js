@@ -17,7 +17,7 @@ const Button = styled.button.attrs(() => ({
   cursor: ${({ disabled }) => disabled ? 'auto' : 'pointer'};
   transition: background-color 150ms ease-in-out, color 150ms ease-in-out;
   outline: none;
-  height: ${({ isSmall }) => isSmall ? '28px' : '36px'};
+  height: ${({ isSmall }) => isSmall ? '32px' : '40px'};
 
   :hover {
     color: ${({ isSecondary }) => isSecondary ? theme.secondaryHoverColor : theme.primaryHoverColor};

@@ -1,23 +1,64 @@
+import React, { useRef } from 'react';
 import PropTypes from 'prop-types';
 
 import * as Styled from './TextField.styled';
 
-function TextField({ isSmall, isDisabled, value, ...restProps }) {
-  return (
-    <input
-      isSmall={isSmall}
-      disabled={isDisabled}
-      value={value}
-      {...restProps}
-    />
-  );
-}
+const TextField = React.forwardRef(
+  (
+    {
+      isSmall,
+      isDisabled,
+      hasError,
+      isReadOnly,
+      isRequired,
+      value,
+      min,
+      max,
+      autoComplete,
+      name,
+      type,
+      placeholder,
+      prefix,
+      suffix,
+      onChange,
+      ...restProps
+    },
+    ref
+  ) => {
+    return (
+      <Styled.Container
+        ref={ref}
+        isSmall={isSmall}
+        isDisabled={isDisabled}
+        hasError={hasError}
+        {...restProps}
+      >
+        {prefix}
+
+        <Styled.Input
+          disabled={isDisabled}
+          readOnly={isReadOnly}
+          required={isRequired}
+          value={value}
+          min={min}
+          max={max}
+          autoComplete={autoComplete}
+          name={name}
+          type={type}
+          placeholder={placeholder}
+          onChange={onChange}
+        />
+
+        {suffix}
+      </Styled.Container>
+    )
+  }
+);
 
 TextField.propTypes = {
   isSmall: PropTypes.bool,
   isDisabled: PropTypes.bool,
   hasError: PropTypes.bool,
-  isMultiline: PropTypes.bool,
   isReadOnly: PropTypes.bool,
   isRequired: PropTypes.bool,
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
@@ -27,8 +68,6 @@ TextField.propTypes = {
   name: PropTypes.string,
   type: PropTypes.string,
   placeholder: PropTypes.string,
-  rows: PropTypes.number,
-  rowsMax: PropTypes.number,
   prefix: PropTypes.element,
   suffix: PropTypes.element,
   onChange: PropTypes.func,
@@ -38,7 +77,6 @@ TextField.defaultProps = {
   isSmall: false,
   isDisabled: false,
   hasError: false,
-  isMultiline: false,
   isReadOnly: false,
   isRequired: false,
   value: undefined,
@@ -48,8 +86,6 @@ TextField.defaultProps = {
   name: undefined,
   type: 'text',
   placeholder: undefined,
-  rows: undefined,
-  rowsMax: undefined,
   prefix: null,
   suffix: null,
   onChange: undefined,
