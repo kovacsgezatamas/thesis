@@ -1,19 +1,21 @@
+import React from 'react';
 import PropTypes from 'prop-types';
 
 import * as Styled from './Button.styled';
 
-function Button({ isSecondary, isSmall, isDisabled, children, ...restProps }) {
-  return (
+const Button = React.forwardRef(
+  ({ isSecondary, isSmall, isDisabled, children, ...restProps }, ref) => (
     <Styled.Button
       isSecondary={isSecondary}
       isSmall={isSmall}
       disabled={isDisabled}
+      ref={ref}
       {...restProps}
     >
       {children}
     </Styled.Button>
   )
-}
+);
 
 Button.propTypes = {
   isSecondary: PropTypes.bool,
