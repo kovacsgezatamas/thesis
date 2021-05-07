@@ -18,6 +18,7 @@
     "@thesis-ui/theme": "0.0.1",
     "@thesis-ui/tokens": "0.0.1",
     "@popperjs/core": "2.9.2",
+    "@use-it/event-listener": "0.1.6",
     "react-popper": "2.2.5"
   },
   "peerDependencies": {

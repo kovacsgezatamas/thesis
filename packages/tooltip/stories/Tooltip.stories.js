@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Tooltip, { StaticTooltip } from '../src';
+import Tooltip from '../src';
 import Button from '../../button/src';
 
 import TooltipHelper from './styled/TooltipHelper';
@@ -9,9 +9,11 @@ import { SAMPLE_LONG_TEXT, SAMPLE_SHORT_TEXT } from '../../../.storybook/constan
 export default {
   title: 'Components/Tooltip',
   component: Tooltip,
+  argTypes: {
+    onShow: { action: 'Tooltip onShow callback' },
+    onHide: { action: 'Tooltip onHide callback' },
+   },
 };
-
-const StaticTooltipTemplate = (args) => <StaticTooltip {...args} />;
 
 const TooltipTemplate = (args) => (
   <TooltipHelper>
@@ -21,18 +23,20 @@ const TooltipTemplate = (args) => (
   </TooltipHelper>
 );
 
-export const TooltipComponent = TooltipTemplate.bind({});
-TooltipComponent.args = {
+export const OpenTooltipComponent = TooltipTemplate.bind({});
+OpenTooltipComponent.args = {
   title: SAMPLE_SHORT_TEXT.substr(0, 100),
   isAlwaysOpen: true,
 };
 
-export const StaticTooltipComponent = StaticTooltipTemplate.bind({});
-StaticTooltipComponent.args = {
-  children: SAMPLE_SHORT_TEXT,
+export const BottomOpenTooltipComponent = TooltipTemplate.bind({});
+BottomOpenTooltipComponent.args = {
+  title: SAMPLE_SHORT_TEXT.substr(0, 100),
+  isAlwaysOpen: true,
+  position: 'bottom',
 };
 
-export const StaticTooltipLongText = StaticTooltipTemplate.bind({});
-StaticTooltipLongText.args = {
-  children: SAMPLE_LONG_TEXT,
+export const TooltipComponent = TooltipTemplate.bind({});
+TooltipComponent.args = {
+  title: SAMPLE_SHORT_TEXT.substr(0, 100),
 };

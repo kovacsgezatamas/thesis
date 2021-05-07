@@ -9,7 +9,7 @@ const tooltip = {
   color: color.grayLight45,
 
   padding: spacing.md,
-  width: '280px',
+  maxWidth: '280px',
   maxHeight: '200px',
   borderRadius: '4px',
 };

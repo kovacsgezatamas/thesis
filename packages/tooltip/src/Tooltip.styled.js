@@ -17,7 +17,7 @@ const StaticTooltip = styled.div`
   color: ${theme.color};
 
   padding: ${theme.padding};
-  width: ${theme.width};
+  max-width: ${theme.maxWidth};
   max-height: ${theme.maxHeight};
   border-radius: ${theme.borderRadius};
   overflow: auto;

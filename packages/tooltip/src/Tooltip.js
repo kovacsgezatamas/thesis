@@ -1,11 +1,21 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { usePopper } from 'react-popper';
 
-import * as Styled from './Tooltip.styled';
+import TooltipPopper from './TooltipPopper';
 
-function Tooltip({ title, children, position, targetEl, onOpen, onClose, isAlwaysOpen, ...restProps }) {
-  const [isOpen, setIsOpen] = useState(false);
+function Tooltip({
+  title,
+  children,
+  position,
+  targetEl,
+  onShow,
+  onHide,
+  isAlwaysOpen,
+  shouldShowOnClick,
+  ...restProps
+}) {
+  const [isVisible, setIsVisible] = useState(false);
   const [referenceElement, setReferenceElement] = useState(null);
   const [popperElement, setPopperElement] = useState(null);
 
@@ -17,42 +27,75 @@ function Tooltip({ title, children, position, targetEl, onOpen, onClose, isAlway
   });
 
   function show() {
-    setIsOpen(true);
+    if (isVisible) {
+      return;
+    }
+
+    setIsVisible(true);
+
+    if (onShow) {
+      onShow();
+    }
   }
 
   function hide() {
-    setIsOpen(false);
+    if (!isVisible) {
+      return;
+    }
+
+    setIsVisible(false);
+
+    if (onHide) {
+      onHide();
+    }
   }
 
   function renderChildren() {
-    return React.Children.map(children || null, child => {
-      return React.cloneElement(child, {
-        ref: setReferenceElement
+    let toggleEvents = {};
+
+    if (!isAlwaysOpen) {
+      toggleEvents = shouldShowOnClick ? {
+        onClick: show,
+      } : {
+        onMouseEnter: show,
+        onMouseLeave: hide,
+      };
+    }
+
+
+    return React.Children.map(children || null, child =>
+      React.cloneElement(child, {
+        ref: setReferenceElement,
+        ...toggleEvents,
       })
-    });
+    );
   }
 
   function renderTooltip() {
     return targetEl ?
       React.createPortal(
-        <Styled.StaticTooltip
+        <TooltipPopper
           ref={setPopperElement}
+          triggerRef={referenceElement}
+          onOutsideClick={hide}
           {...restProps}
           style={styles.popper}
           {...attributes.popper}
         >
           {title}
-        </Styled.StaticTooltip>,
+        </TooltipPopper>,
         targetEl
       ) : (
-        <Styled.StaticTooltip
+        <TooltipPopper
           ref={setPopperElement}
+          triggerRef={referenceElement}
+          onOutsideClick={hide}
           {...restProps}
           style={styles.popper}
           {...attributes.popper}
         >
           {title}
-        </Styled.StaticTooltip>
+        </TooltipPopper>
       );
   }
 
@@ -60,7 +103,7 @@ function Tooltip({ title, children, position, targetEl, onOpen, onClose, isAlway
     <>
       {renderChildren()}
 
-      {(isAlwaysOpen || isOpen) && renderTooltip()}
+      {(isAlwaysOpen || isVisible) && renderTooltip()}
     </>
   );
 }
@@ -86,17 +129,19 @@ Tooltip.propTypes = {
     'left-end',
   ]),
   targetEl: PropTypes.element,
-  onOpen: PropTypes.func,
-  onClose: PropTypes.func,
+  onShow: PropTypes.func,
+  onHide: PropTypes.func,
   isAlwaysOpen: PropTypes.bool,
+  shouldShowOnClick: PropTypes.bool,
 };
 
 Tooltip.defaultProps = {
   position: 'top-start',
   targetEl: undefined,
-  onOpen: undefined,
-  onClose: undefined,
+  onShow: undefined,
+  onHide: undefined,
   isAlwaysOpen: false,
+  shouldShowOnClick: false,
 };
 
 export default Tooltip;

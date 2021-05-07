@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const TooltipHelper = styled.div`
-  width: 640px;
+  width: 680px;
   height: 320px;
   display: flex;
   align-items: center;
