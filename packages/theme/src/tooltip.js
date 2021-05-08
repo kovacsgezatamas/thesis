@@ -11,7 +11,7 @@ const tooltip = {
   padding: spacing.md,
   maxWidth: '280px',
   maxHeight: '200px',
-  borderRadius: '4px',
+  borderRadius: spacing.xs,
 };
 
 export default tooltip;

@@ -21,6 +21,7 @@ const TextField = React.forwardRef(
       prefix,
       suffix,
       onChange,
+      inputPros,
       ...restProps
     },
     ref
@@ -47,6 +48,7 @@ const TextField = React.forwardRef(
           type={type}
           placeholder={placeholder}
           onChange={onChange}
+          {...inputPros}
         />
 
         {suffix}
@@ -71,6 +73,7 @@ TextField.propTypes = {
   prefix: PropTypes.element,
   suffix: PropTypes.element,
   onChange: PropTypes.func,
+  inputProps: PropTypes.object,
 };
 
 TextField.defaultProps = {
@@ -89,6 +92,7 @@ TextField.defaultProps = {
   prefix: null,
   suffix: null,
   onChange: undefined,
+  inputProps: {},
 };
 
 export default TextField;
