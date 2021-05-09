@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { tabs as theme } from '@thesis-ui/theme';
 
 function getButtonCursor({ isSelected, isDisabled }) {
@@ -33,15 +33,6 @@ function getButtonColor({ isSelected, isDisabled }) {
   return theme.buttonColor;
 }
 
-const Container = styled.div.attrs(() => ({
-  'data-test-id': 'TABS_CONTAINER',
-}))`
-  display: flex;
-  box-sizing: border-box;
-  padding: ${theme.containerPadding};
-  background: ${theme.containerBackground};
-  border-bottom: ${theme.containerBorderBottom};
-`;
 
 const TabButton = styled.button.attrs(() => ({
   'data-test-id': 'TAB_BUTTON',
@@ -57,6 +48,9 @@ const TabButton = styled.button.attrs(() => ({
   color: ${getButtonColor};
   padding: ${theme.buttonPadding};
   position: relative;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: ${({ isMultiline }) => isMultiline ? 'normal' : 'nowrap'};
 
   &:after {
     display: block;
@@ -69,6 +63,25 @@ const TabButton = styled.button.attrs(() => ({
     height: ${theme.selectionLineHeight};
     background: ${theme.selectionLineColor};
     transition: opacity 150ms ease-in;
+  }
+`;
+
+const Container = styled.div.attrs(() => ({
+  'data-test-id': 'TABS_CONTAINER',
+}))`
+  display: flex;
+  box-sizing: border-box;
+  white-space: nowrap;
+  overflow: auto;
+  padding: ${theme.containerPadding};
+  background: ${theme.containerBackground};
+  border-bottom: ${theme.containerBorderBottom};
+
+  ${TabButton} {
+    ${({ isStreched }) => isStreched ?css `
+      align-items: stretch;
+      width: 100%
+    `: ''}
   }
 `;
 

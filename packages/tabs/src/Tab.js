@@ -4,12 +4,14 @@ import * as Styled from './Tabs.styled';
 
 function Tab({
   isSelected,
-  isStreched,
-  isDisabled, isMultiline, children, ...restProps }) {
+  isDisabled,
+  isMultiline,
+  children,
+  ...restProps
+}) {
   return (
     <Styled.TabButton
       isSelected={isSelected}
-      isStreched={isStreched}
       isDisabled={isDisabled}
       isMultiline={isMultiline}
       {...restProps}
@@ -21,14 +23,14 @@ function Tab({
 
 Tab.propTypes = {
   isSelected: PropTypes.bool,
-  isStreched: PropTypes.bool,
   isDisabled: PropTypes.bool,
+  isMultiline: PropTypes.bool,
 }
 
 Tab.defaultProps = {
   isSelected: false,
-  isStreched: false,
   isDisabled: false,
+  isMultiline: false,
 };
 
 export default Tab;
