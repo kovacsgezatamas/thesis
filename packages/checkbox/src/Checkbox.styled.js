@@ -63,7 +63,9 @@ function getInsideIcon({ isChecked, isIndeterminate, hasError }) {
   return undefined;
 }
 
-const Container = styled.div`
+const Icon = styled.div.attrs(() => ({
+  'data-test-id': 'CHECKBOX_ICON',
+}))`
   box-sizing: border-box;
   display: flex;
   align-items: center;
@@ -79,4 +81,4 @@ const Container = styled.div`
   ${getInsideIcon};
 `;
 
-export { Container };
+export { Icon };

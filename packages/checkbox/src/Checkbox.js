@@ -20,7 +20,7 @@ function Checkbox({
       isChecked={isChecked}
       isDisabled={isDisabled}
       icon={(
-        <Styled.Container
+        <Styled.Icon
           isChecked={isChecked}
           isIndeterminate={isIndeterminate}
           isDisabled={isDisabled}
