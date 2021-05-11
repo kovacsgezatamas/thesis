@@ -1,6 +1,6 @@
 {
-  "name": "@thesis-ui/checkbox",
-  "description": "Thesis UI - Checkbox component",
+  "name": "@thesis-ui/switch-base",
+  "description": "Thesis UI - Switch Base component",
   "version": "0.0.1",
   "license": "MIT",
   "author": "Geza-Tamas Kovacs <kovacs.geza.tamas@gmail.com>",
@@ -10,12 +10,11 @@
     "src"
   ],
   "repository": {
-    "directory": "packages/checkbox",
+    "directory": "packages/switchBase",
   "type": "git",
     "url": "git@github.com:kovacsgezatamas/thesis.git"
   },
   "dependencies": {
-    "@thesis-ui/switch-base": "0.0.1",
     "@thesis-ui/theme": "0.0.1",
     "@thesis-ui/tokens": "0.0.1"
   },
