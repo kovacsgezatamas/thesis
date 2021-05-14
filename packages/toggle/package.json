@@ -24,5 +24,8 @@
     "react-dom": "17.0.1",
     "styled-components": "5.2.1"
   },
-  "gitHead": "39aa67215c1d99ca38daa9104944d5194e7f94f9"
+  "gitHead": "3c2c336cf9d32f418acedf05b1e3c6074f4d5123",
+  "publishConfig": {
+    "access": "public"
+  }
 }
