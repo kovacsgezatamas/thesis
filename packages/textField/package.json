@@ -11,7 +11,7 @@
   ],
   "repository": {
     "directory": "packages/textField",
-  "type": "git",
+    "type": "git",
     "url": "git@github.com:kovacsgezatamas/thesis.git"
   },
   "dependencies": {
@@ -22,5 +22,6 @@
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "styled-components": "5.2.1"
-  }
+  },
+  "gitHead": "39aa67215c1d99ca38daa9104944d5194e7f94f9"
 }

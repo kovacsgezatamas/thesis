@@ -11,12 +11,11 @@
   ],
   "repository": {
     "directory": "packages/theme",
-  "type": "git",
+    "type": "git",
     "url": "git@github.com:kovacsgezatamas/thesis.git"
   },
   "dependencies": {
     "@thesis-ui/tokens": "0.0.1"
   },
-  "peerDependencies": {
-  }
+  "gitHead": "39aa67215c1d99ca38daa9104944d5194e7f94f9"
 }
