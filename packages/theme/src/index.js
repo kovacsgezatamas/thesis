@@ -5,6 +5,7 @@ import loader from './loader';
 import radio from './radio';
 import spinner from './spinner';
 import tabs from './tabs';
+import textarea from './textarea';
 import textField from './textField';
 import toggle from './toggle';
 import tooltip from './tooltip';
@@ -17,6 +18,7 @@ export {
   radio,
   spinner,
   tabs,
+  textarea,
   textField,
   toggle,
   tooltip,

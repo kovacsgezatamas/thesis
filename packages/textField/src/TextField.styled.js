@@ -60,6 +60,8 @@ const Addition = styled.div`
   display: flex;
   align-items: center;
   padding: ${theme.additionPadding};
+  margin: ${theme.additionMargin};
+  border-radius: ${theme.prefixBorderRadius};
 `;
 
 const Input = styled.input`
@@ -73,6 +75,10 @@ const Input = styled.input`
   background: transparent;
   color: inherit;
   padding: ${theme.padding};
+
+  + ${Addition} {
+    border-radius: ${theme.suffixBorderRadius};
+  }
 `;
 
 export { Container, Addition, Input };
