@@ -1,0 +1,1 @@
+# Badge component - Thesis UI
