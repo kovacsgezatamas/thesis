@@ -1,6 +1,6 @@
 {
-  "name": "@thesis-ui/backdrop",
-  "description": "Thesis UI - Backdrop component",
+  "name": "@thesis-ui/modal",
+  "description": "Thesis UI - Modal component",
   "version": "0.0.2",
   "license": "MIT",
   "author": "Geza-Tamas Kovacs <kovacs.geza.tamas@gmail.com>",
@@ -10,11 +10,12 @@
     "lib"
   ],
   "repository": {
-    "directory": "packages/backdrop",
+    "directory": "packages/modal",
     "type": "git",
     "url": "git@github.com:kovacsgezatamas/thesis.git"
   },
   "dependencies": {
+    "@thesis-ui/backdrop": "^0.0.2",
     "@thesis-ui/theme": "^0.0.2",
     "@thesis-ui/tokens": "^0.0.2"
   },

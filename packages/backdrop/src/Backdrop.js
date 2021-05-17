@@ -15,6 +15,7 @@ const animation = keyframes`
 const Backdrop = styled.div.attrs(() => ({
   'data-test-id': 'BACKDROP',
 }))`
+  outline: none;
   opacity: ${theme.opacity};
   background: ${theme.background};
   width: 100%;

@@ -3,6 +3,7 @@ import badge from './badge';
 import button from './button';
 import checkbox from './checkbox';
 import loader from './loader';
+import modal from './modal';
 import nav from './nav';
 import radio from './radio';
 import spinner from './spinner';
@@ -18,6 +19,7 @@ export {
   button,
   checkbox,
   loader,
+  modal,
   nav,
   radio,
   spinner,
