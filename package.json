@@ -29,6 +29,6 @@
     "start:storybook": "start-storybook -p 6006",
     "chromatic": "npx chromatic --project-token 9e946e15520a",
     "bump:version": "lerna version",
-    "release": "lerna release"
+    "release": "lerna publish from-package"
   }
 }
