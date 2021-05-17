@@ -70,8 +70,8 @@ TextField.propTypes = {
   name: PropTypes.string,
   type: PropTypes.string,
   placeholder: PropTypes.string,
-  prefix: PropTypes.element,
-  suffix: PropTypes.element,
+  prefix: PropTypes.node,
+  suffix: PropTypes.node,
   onChange: PropTypes.func,
   inputProps: PropTypes.object,
 };

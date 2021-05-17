@@ -109,8 +109,8 @@ function Tooltip({
 }
 
 Tooltip.propTypes = {
-  title: PropTypes.element.isRequired,
-  children: PropTypes.element.isRequired,
+  title: PropTypes.node.isRequired,
+  children: PropTypes.node.isRequired,
   position: PropTypes.oneOf([
     'auto',
     'auto-start',

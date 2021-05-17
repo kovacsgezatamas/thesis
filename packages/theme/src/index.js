@@ -2,6 +2,7 @@ import badge from './badge';
 import button from './button';
 import checkbox from './checkbox';
 import loader from './loader';
+import nav from './nav';
 import radio from './radio';
 import spinner from './spinner';
 import tabs from './tabs';
@@ -15,6 +16,7 @@ export {
   button,
   checkbox,
   loader,
+  nav,
   radio,
   spinner,
   tabs,
