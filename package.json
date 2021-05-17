@@ -2,7 +2,10 @@
   "name": "thesis-us",
   "private": true,
   "devDependencies": {
-    "@babel/core": "7.13.10",
+    "@babel/cli": "7.12.10",
+    "@babel/core": "7.12.10",
+    "@babel/preset-env": "7.12.10",
+    "@babel/preset-react": "7.12.10",
     "@storybook/addon-actions": "6.1.21",
     "@storybook/addon-essentials": "6.1.21",
     "@storybook/addon-links": "6.1.21",
@@ -13,12 +16,15 @@
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "rebass": "4.0.7",
+    "rimraf": "3.0.2",
     "styled-components": "5.2.1"
   },
   "dependencies": {},
   "scripts": {
-    "build": "yarn -v",
-    "build:dev": "yarn -v",
+    "clear:lib": "rimraf ./packages/**/lib/",
+    "bootstrap": "lerna bootstrap",
+    "start": "yarn clear:lib && lerna exec --parallel -- babel --root-mode upward src -d lib --ignore test.js,stories.js,demo.js --watch",
+    "build": "yarn clear:lib && lerna exec --parallel -- babel --root-mode upward src -d lib --ignore test.js,stories.js,demo.js",
     "build:storybook": "build-storybook",
     "start:storybook": "start-storybook -p 6006",
     "chromatic": "npx chromatic --project-token 9e946e15520a"
