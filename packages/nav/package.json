@@ -1,7 +1,7 @@
 {
   "name": "@thesis-ui/nav",
   "description": "Thesis UI - Nav component",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "MIT",
   "author": "Geza-Tamas Kovacs <kovacs.geza.tamas@gmail.com>",
   "homepage": "https://github.com/kovacsgezatamas/thesis",
@@ -15,8 +15,8 @@
     "url": "git@github.com:kovacsgezatamas/thesis.git"
   },
   "dependencies": {
-    "@thesis-ui/theme": "0.0.1",
-    "@thesis-ui/tokens": "0.0.1"
+    "@thesis-ui/theme": "^0.0.2",
+    "@thesis-ui/tokens": "^0.0.2"
   },
   "peerDependencies": {
     "react": "^17.0.1",
