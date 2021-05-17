@@ -1,3 +1,4 @@
+import backdrop from './backdrop';
 import badge from './badge';
 import button from './button';
 import checkbox from './checkbox';
@@ -12,6 +13,7 @@ import toggle from './toggle';
 import tooltip from './tooltip';
 
 export {
+  backdrop,
   badge,
   button,
   checkbox,

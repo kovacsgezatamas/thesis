@@ -1,0 +1,31 @@
+{
+  "name": "@thesis-ui/backdrop",
+  "description": "Thesis UI - Backdrop component",
+  "version": "0.0.2",
+  "license": "MIT",
+  "author": "Geza-Tamas Kovacs <kovacs.geza.tamas@gmail.com>",
+  "homepage": "https://github.com/kovacsgezatamas/thesis",
+  "main": "lib/index.js",
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "directory": "packages/backdrop",
+    "type": "git",
+    "url": "git@github.com:kovacsgezatamas/thesis.git"
+  },
+  "dependencies": {
+    "@thesis-ui/theme": "^0.0.2",
+    "@thesis-ui/tokens": "^0.0.2",
+    "polished": "4.1.1"
+  },
+  "peerDependencies": {
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
+    "styled-components": "5.2.1"
+  },
+  "gitHead": "3c2c336cf9d32f418acedf05b1e3c6074f4d5123",
+  "publishConfig": {
+    "access": "public"
+  }
+}
