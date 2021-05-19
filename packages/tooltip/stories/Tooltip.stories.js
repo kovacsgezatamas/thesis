@@ -13,6 +13,9 @@ export default {
     onShow: { action: 'Tooltip onShow callback' },
     onHide: { action: 'Tooltip onHide callback' },
    },
+   parameters: {
+    chromatic: { delay: 600 },
+  },
 };
 
 const TooltipTemplate = (args) => (

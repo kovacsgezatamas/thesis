@@ -11,6 +11,9 @@ export default {
   argTypes: {
     onClose: { action: 'Modal onClose callback' },
    },
+   parameters: {
+    chromatic: { delay: 600 },
+  },
 };
 
 const Template = ({ isVisible, onClose, ...args }) =>(
