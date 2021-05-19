@@ -8,9 +8,6 @@ import Spinner from '../../spinner/src';
 export default {
   title: 'Components/Backdrop',
   component: Backdrop,
-  parameters: {
-    chromatic: { delay: 1500 },
-  },
 };
 
 const Template = ({ isVisible }) =>(
