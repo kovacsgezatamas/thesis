@@ -9,7 +9,7 @@ export default {
   title: 'Components/Backdrop',
   component: Backdrop,
   parameters: {
-    chromatic: { delay: 600 },
+    chromatic: { delay: 1500 },
   },
 };
 
@@ -26,6 +26,9 @@ export const BackdropComponent = Template.bind({});
 BackdropComponent.args = {
   isVisible: true,
 };
+BackdropComponent.parameters = {
+  chromatic: { delay: 1500 },
+};
 
 export const WithSpinner = () => (
   <BackdropHelper>
@@ -38,4 +41,8 @@ export const WithSpinner = () => (
       </BackdropSpinnerHelper>
     </Backdrop>
   </BackdropHelper>
-)
+);
+WithSpinner.parameters = {
+  chromatic: { delay: 1500 },
+};
+
