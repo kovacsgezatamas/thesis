@@ -1,7 +1,7 @@
 {
   "name": "@thesis-ui/badge",
   "description": "Thesis UI - Badge component",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "license": "MIT",
   "author": "Geza-Tamas Kovacs <kovacs.geza.tamas@gmail.com>",
   "homepage": "https://github.com/kovacsgezatamas/thesis",
@@ -15,8 +15,8 @@
     "url": "git@github.com:kovacsgezatamas/thesis.git"
   },
   "dependencies": {
-    "@thesis-ui/theme": "^0.0.2",
-    "@thesis-ui/tokens": "^0.0.2"
+    "@thesis-ui/theme": "^0.0.3",
+    "@thesis-ui/tokens": "^0.0.3"
   },
   "peerDependencies": {
     "react": "17.0.1",

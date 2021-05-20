@@ -1,7 +1,7 @@
 {
   "name": "@thesis-ui/tooltip",
   "description": "Thesis UI - Tooltip component",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "license": "MIT",
   "author": "Geza-Tamas Kovacs <kovacs.geza.tamas@gmail.com>",
   "homepage": "https://github.com/kovacsgezatamas/thesis",
@@ -16,8 +16,8 @@
   },
   "dependencies": {
     "@popperjs/core": "2.9.2",
-    "@thesis-ui/theme": "^0.0.2",
-    "@thesis-ui/tokens": "^0.0.2",
+    "@thesis-ui/theme": "^0.0.3",
+    "@thesis-ui/tokens": "^0.0.3",
     "@use-it/event-listener": "0.1.6",
     "react-popper": "2.2.5"
   },
