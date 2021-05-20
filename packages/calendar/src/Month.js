@@ -75,6 +75,9 @@ Month.propTypes = {
 Month.defaultProps = {
   selected: {},
   highlighted: {},
+  onDayClick: () => {},
+  onDayMouseEnter: () => {},
+  onMouseLeave: () => {},
 };
 
 export default Month;

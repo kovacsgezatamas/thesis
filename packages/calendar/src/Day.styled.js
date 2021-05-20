@@ -1,8 +1,8 @@
 import styled, { css } from 'styled-components';
 import { calendar as theme } from '@thesis-ui/theme';
 
-function getDayStateStyles({ isWeekend, isSelected }) {
-  if (isSelected) {
+function getDayStateStyles({ isWeekend, isInInterval }) {
+  if (isInInterval) {
     return css`
       color: ${theme.daySelectedColor};
       background: ${theme.daySelectedBackground};
@@ -15,19 +15,18 @@ function getDayStateStyles({ isWeekend, isSelected }) {
   `;
 }
 
-function getBorderRadius({ isSelectedStart, isSelectedEnd }) {
-  const value = theme.dayBorderRadius;
+function getBorderRadius({ isIntervalStart, isIntervalEnd }, value) {
   let leftBorderRadius = '';
   let rightBorderRadius = '';
 
-  if (isSelectedStart) {
+  if (isIntervalStart) {
     leftBorderRadius = `
       border-top-left-radius: ${value};
       border-bottom-left-radius: ${value};
     `;
   }
 
-  if (isSelectedEnd) {
+  if (isIntervalEnd) {
     rightBorderRadius = `
       border-top-right-radius: ${value};
       border-bottom-right-radius: ${value};
@@ -40,11 +39,11 @@ function getBorderRadius({ isSelectedStart, isSelectedEnd }) {
   `;
 }
 
-function getSpacing({ isSelectedStart, isSelectedEnd }) {
-  const rightSpacing = isSelectedEnd ?
+function getSpacing({ isIntervalStart, isIntervalEnd }) {
+  const rightSpacing = isIntervalEnd ?
     `border-right: 4px solid ${theme.background}` :
     'padding-right: 4px';
-  const leftSpacing = isSelectedStart ?
+  const leftSpacing = isIntervalStart ?
     `border-left: 4px solid ${theme.background}` :
     'padding-left: 4px';
 
@@ -73,6 +72,7 @@ const Container = styled.div.attrs(() => ({
   user-select: none;
   ${getDayStateStyles};
   ${getBorderRadius};
+  ${props => getBorderRadius(props, theme.dayBorderRadius)};
   ${getSpacing};
 
   &:after {
@@ -83,9 +83,23 @@ const Container = styled.div.attrs(() => ({
     left: 9px;
     width: calc(100% - 18px);
     height: ${theme.dayTodayHeight};
-    background: ${({ isSelected }) => isSelected ? theme.todaySelectedColor : theme.todayColor};
+    background: ${({ isInInterval }) => isInInterval ? theme.todaySelectedColor : theme.todayColor};
     border-radius: ${theme.todayBorderRadius};
   }
 `;
 
-export { Container }
+const Highlight = styled.div`
+  position: absolute;
+  top: -3px;
+  left: ${({ isSelectionStart }) => isSelectionStart ? '-4px' : '0'};
+  border-top: ${theme.dayHighlightBorder};
+  border-bottom: ${theme.dayHighlightBorder};
+  width: ${theme.daySize};
+  height: calc(${theme.daySize} - 1.5px);
+  z-index: 2;
+  ${({ isIntervalStart }) => isIntervalStart ? `border-left: ${theme.dayHighlightBorder}` : ''};
+  ${({ isIntervalEnd }) => isIntervalEnd ? `border-right: ${theme.dayHighlightBorder}` : ''};
+  ${props => getBorderRadius(props, theme.dayHighlightBorderRadius)};
+`;
+
+export { Container, Highlight }

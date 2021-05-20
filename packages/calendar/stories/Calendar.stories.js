@@ -5,11 +5,17 @@ import Calendar from '../src';
 export default {
   title: 'Components/Calendar',
   component: Calendar,
+  argTypes: {
+    onDateChange: { action: 'Calendar onDateChange callback' },
+    onDateRangeChange: { action: 'Calendar onDateRangeChange callback' },
+   },
 };
 
-const Template = () => <Calendar />;
+const Template = (args) => <Calendar {...args} />;
 
 export const CalendarComponent = Template.bind({});
 CalendarComponent.args = {
-  isVisible: true,
+  date: new Date(),
+  mode: 'DATE',
+  monthsNumber: 2,
 };

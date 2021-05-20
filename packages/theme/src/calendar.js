@@ -12,13 +12,17 @@ const calendar = {
   fontSize: fontSize.md,
   lineHeight: lineHeight.md,
   background: color.white,
+  monthsGap: spacing.lg,
+  navigationArrowColor: color.grayLight15,
+  navigationArrowHoverColor: color.gray,
+  navigationArrowSize: '4px',
 
   daySize: '36px',
   dayTodayHeight: '3px',
   dayBorderRadius: spacing.md,
   dayFontWeight: fontWeight.md,
 
-  todayColor: color.seaGreenLight10,
+  todayColor: color.turquoiseDark20,
   todaySelectedColor: color.white,
   todayBorderRadius: spacing.xxs,
   todayFontWeight: fontWeight.lg,
@@ -28,7 +32,10 @@ const calendar = {
   daySelectedColor: color.white,
 
   dayBackground: color.white,
-  daySelectedBackground: color.seaGreen,
+  daySelectedBackground: color.turquoiseDark10,
+
+  dayHighlightBorder: `2px solid ${color.dodgerBlueLight10}`,
+  dayHighlightBorderRadius: '10px',
 
   monthWidth: '252px',
 
@@ -37,7 +44,7 @@ const calendar = {
 
   dayOfWeekColor: color.grayDark15,
   dayOfWeekPadding: `${spacing.sm} 0`,
-  dayOfWeekBorderBottom: `2px solid ${color.seaGreenLight20}`,
+  dayOfWeekBorderBottom: `2px solid ${color.turquoiseLight10}`,
   dayOfWeekMarginBottom: spacing.sm,
   dayOfWeekFontWeigth: fontWeight.lg,
 };

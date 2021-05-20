@@ -29,8 +29,8 @@ Today.args = {
   date: new Date(),
 };
 
-export const IntervalStart = Template.bind({});
-IntervalStart.args = {
+export const SelectedStart = Template.bind({});
+SelectedStart.args = {
   date: new Date(2021, 2, 15),
   selected: {
     start: new Date(2021, 2, 15),
@@ -38,8 +38,8 @@ IntervalStart.args = {
   }
 };
 
-export const IntervalStartToday = Template.bind({});
-IntervalStartToday.args = {
+export const SelectedStartToday = Template.bind({});
+SelectedStartToday.args = {
   date: new Date(),
   selected: {
     start: new Date(),
@@ -47,8 +47,8 @@ IntervalStartToday.args = {
   }
 };
 
-export const IntervalEnd = Template.bind({});
-IntervalEnd.args = {
+export const SelectedEnd = Template.bind({});
+SelectedEnd.args = {
   date: new Date(2021, 2, 15),
   selected: {
     start: new Date(2021, 2, 1),
@@ -56,8 +56,8 @@ IntervalEnd.args = {
   }
 };
 
-export const IntervalEndToday = Template.bind({});
-IntervalEndToday.args = {
+export const SelectedEndToday = Template.bind({});
+SelectedEndToday.args = {
   date: new Date(),
   selected: {
     start: new Date(1990, 0, 1),
@@ -65,8 +65,8 @@ IntervalEndToday.args = {
   }
 };
 
-export const IntervalStartEnd = Template.bind({});
-IntervalStartEnd.args = {
+export const SelectedStartEnd = Template.bind({});
+SelectedStartEnd.args = {
   date: new Date(2021, 3, 15),
   selected: {
     start: new Date(2021, 3, 15),
@@ -74,8 +74,8 @@ IntervalStartEnd.args = {
   }
 };
 
-export const IntervalStartEndToday = Template.bind({});
-IntervalStartEndToday.args = {
+export const SelectedStartEndToday = Template.bind({});
+SelectedStartEndToday.args = {
   date: new Date(),
   selected: {
     start: new Date(),
@@ -83,8 +83,8 @@ IntervalStartEndToday.args = {
   }
 };
 
-export const InInterval = Template.bind({});
-InInterval.args = {
+export const InSelected = Template.bind({});
+InSelected.args = {
   date: new Date(2021, 3, 15),
   selected: {
     start: new Date(2021, 3, 1),
@@ -92,8 +92,8 @@ InInterval.args = {
   }
 };
 
-export const InIntervalToday = Template.bind({});
-InIntervalToday.args = {
+export const InSelectedToday = Template.bind({});
+InSelectedToday.args = {
   date: new Date(),
   selected: {
     start: new Date(1990, 1, 1),
@@ -101,11 +101,11 @@ InIntervalToday.args = {
   }
 };
 
-export const IntervalStartNoIntervalEnd = Template.bind({});
-IntervalStartNoIntervalEnd.args = {
+export const SelectedStartNoSelectedEnd = Template.bind({});
+SelectedStartNoSelectedEnd.args = {
   date: new Date(2021, 3, 15),
   selected: {
     start: new Date(2021, 3, 15),
     end: undefined,
   }
-}
+};

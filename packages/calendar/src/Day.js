@@ -11,8 +11,8 @@ import isSameDay from 'date-fns/isSameDay';
 
 import * as Styled from './Day.styled';
 
-function getDaySelectedProps(date, selected) {
-  let { start, end } = selected;
+function getDayIntervalProps(date, interval) {
+  let { start, end } = interval;
   end = end || start;
 
   if (!isDate(start) || !isDate(end)) {
@@ -23,9 +23,9 @@ function getDaySelectedProps(date, selected) {
   const extendedEnd = endOfDay(end);
 
   return {
-    isSelected: isWithinInterval(date, { start: extendedStart, end: extendedEnd }),
-    isSelectedStart: isSameDay(date, extendedStart),
-    isSelectedEnd: isSameDay(date, extendedEnd),
+    isInInterval: isWithinInterval(date, { start: extendedStart, end: extendedEnd }),
+    isIntervalStart: isSameDay(date, extendedStart),
+    isIntervalEnd: isSameDay(date, extendedEnd),
   }
 }
 
@@ -38,12 +38,20 @@ function Day({ date, selected, highlighted, ...restProps }) {
   const containerProps = {
     isToday: isToday(date),
     isWeekend: isWeekend(date),
-    ...getDaySelectedProps(date, selected)
+    ...getDayIntervalProps(date, selected)
   };
+  const highlightProps = getDayIntervalProps(date, highlighted);
 
   return (
     <Styled.Container {...containerProps} {...restProps}>
       {dayNumber}
+
+      {highlightProps.isInInterval && (
+        <Styled.Highlight
+          isSelectionStart={containerProps.isIntervalStart}
+          {...highlightProps}
+        />
+      )}
     </Styled.Container>
   );
 }

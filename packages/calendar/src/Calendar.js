@@ -1,9 +1,15 @@
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import isDate from 'date-fns/isDate';
+import addMonths from 'date-fns/addMonths';
+import eachMonthOfInterval from 'date-fns/eachMonthOfInterval';
+
+import Month from './Month';
+import * as Styled from './Calendar.styled';
 
 const calendarMode = {
-  date: 'DATE',
-  dateRange: 'DATE_RANGE',
+  DATE: 'DATE',
+  DATE_RANGE: 'DATE_RANGE',
 };
 
 function getFocusedDate(date, dateRange, mode) {
@@ -11,21 +17,90 @@ function getFocusedDate(date, dateRange, mode) {
     return isDate(date) ? date : new Date();
   }
 
-  if (isDate(dateRange.end)) {
+  if (isDate(dateRange?.end)) {
     return dateRange.end;
   }
 
-  if (isDate(dateRange.start)) {
+  if (isDate(dateRange?.start)) {
     return dateRange.start;
   }
 
   return new Date();
 }
 
-function Calendar() {
-  const focusedDate = getFocusedDate(date, dateRange);
+function getSelectedInterval(date, dateRange, mode) {
+  if (mode === calendarMode.DATE) {
+    return isDate(date) ?
+      { start: date } :
+      undefined;
+  };
 
-  return <div />;
+  if (isDate(dateRange?.start)) {
+    return {
+      start: dateRange.start,
+      end: dateRange.end,
+    };
+  }
+
+  return undefined;
+}
+
+function Calendar({
+  date,
+  dateRange,
+  mode,
+  monthsNumber,
+  onDateChange,
+  onDateRangeChange,
+}) {
+  const [focusedDate, setFocusedDate] = useState(getFocusedDate(date, dateRange, mode));
+
+  function navigateToPrevMonth() {
+    if (!isDate(focusedDate)) {
+      return
+    }
+
+    setFocusedDate(addMonths(focusedDate, -1));
+  }
+
+  function navigateToNextMonth() {
+    if (!isDate(focusedDate)) {
+      return
+    }
+
+    setFocusedDate(addMonths(focusedDate, 1));
+  }
+
+  if (!focusedDate) {
+    return null;
+  }
+
+  const lastFocusedDate = addMonths(focusedDate, monthsNumber - 1);
+  const selected = getSelectedInterval(date, dateRange, mode);
+
+  return (
+    <Styled.Container>
+      <Styled.Navigation>
+        <Styled.PrevMonth onClick={navigateToPrevMonth} />
+        <Styled.NextMonth onClick={navigateToNextMonth} />
+      </Styled.Navigation>
+
+      <Styled.Content>
+        {eachMonthOfInterval({
+          start: focusedDate,
+          end: lastFocusedDate,
+          }).map(date => (
+            <Month
+              date={date}
+              selected={selected}
+              key={date}
+            />
+          ))
+        }
+      </Styled.Content>
+    </Styled.Container>
+  );
+  return ;
 }
 
 Calendar.propTypes = {

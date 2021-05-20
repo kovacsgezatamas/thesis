@@ -67,3 +67,17 @@ ToToday.args = {
     end: new Date(),
   }
 };
+
+
+export const SelectedAndHighlighted = Template.bind({});
+SelectedAndHighlighted.args = {
+  date: new Date(2021, 3, 2),
+  selected: {
+    start: new Date(2021, 3, 15),
+    end: new Date(2021, 3, 22),
+  },
+  highlighted: {
+    start: new Date(2021, 3, 15),
+    end: new Date(2021, 3, 24),
+  },
+};
