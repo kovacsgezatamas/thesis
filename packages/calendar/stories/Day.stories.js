@@ -5,6 +5,11 @@ import { Day } from '../src';
 export default {
   title: 'Components/Calendar/Day',
   component: Day,
+  argTypes: {
+    onClick: { action: 'Day onClick callback' },
+    onMouseEnter: { action: 'Day onMouseEnter callback' },
+    onMouseLeave: { action: 'Day onMouseLeave callback' },
+   },
 };
 
 const Template = (args) => <Day {...args} />;
@@ -96,8 +101,8 @@ InIntervalToday.args = {
   }
 };
 
-export const AsIntervalStartNoIntervalEnd = Template.bind({});
-AsIntervalStartNoIntervalEnd.args = {
+export const IntervalStartNoIntervalEnd = Template.bind({});
+IntervalStartNoIntervalEnd.args = {
   date: new Date(2021, 3, 15),
   selected: {
     start: new Date(2021, 3, 15),

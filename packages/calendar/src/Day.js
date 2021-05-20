@@ -9,7 +9,7 @@ import endOfDay from 'date-fns/endOfDay';
 import isWithinInterval from 'date-fns/isWithinInterval';
 import isSameDay from 'date-fns/isSameDay';
 
-import * as Styled from './Calendar.styled';
+import * as Styled from './Day.styled';
 
 function getDaySelectedProps(date, selected) {
   let { start, end } = selected;
@@ -29,22 +29,22 @@ function getDaySelectedProps(date, selected) {
   }
 }
 
-function Day({ date, selected, focused }) {
+function Day({ date, selected, highlighted, ...restProps }) {
   if (!date) {
-    return <Styled.DayContainer />;
+    return <Styled.Container {...restProps} />;
   }
 
   const dayNumber = getDate(date);
-  const dayContainerProps = {
+  const containerProps = {
     isToday: isToday(date),
     isWeekend: isWeekend(date),
     ...getDaySelectedProps(date, selected)
   };
 
   return (
-    <Styled.DayContainer {...dayContainerProps}>
+    <Styled.Container {...containerProps} {...restProps}>
       {dayNumber}
-    </Styled.DayContainer>
+    </Styled.Container>
   );
 }
 
@@ -54,7 +54,7 @@ Day.propTypes = {
     start: PropTypes.instanceOf(Date),
     end: PropTypes.instanceOf(Date),
   }),
-  focused: PropTypes.shape({
+  highlighted: PropTypes.shape({
     start: PropTypes.instanceOf(Date),
     end: PropTypes.instanceOf(Date),
   }),
@@ -62,7 +62,7 @@ Day.propTypes = {
 
 Day.defaultProps = {
   selected: {},
-  focused: {},
+  highlighted: {},
 };
 
 export default React.memo(Day);
