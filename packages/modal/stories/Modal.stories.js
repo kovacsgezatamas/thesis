@@ -11,9 +11,6 @@ export default {
   argTypes: {
     onClose: { action: 'Modal onClose callback' },
    },
-   parameters: {
-    chromatic: { delay: 600 },
-  },
 };
 
 const Template = ({ isVisible, onClose, ...args }) =>(
@@ -53,4 +50,7 @@ ModalComponent.args = {
   shouldCloseOnBackdropClick: true,
   staticWidth: '',
   staticHeight: '',
+};
+ModalComponent.parameters = {
+  chromatic: { delay: 1500 },
 };

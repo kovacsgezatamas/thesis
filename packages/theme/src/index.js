@@ -1,6 +1,7 @@
 import backdrop from './backdrop';
 import badge from './badge';
 import button from './button';
+import calendar from './calendar';
 import checkbox from './checkbox';
 import loader from './loader';
 import modal from './modal';
@@ -17,6 +18,7 @@ export {
   backdrop,
   badge,
   button,
+  calendar,
   checkbox,
   loader,
   modal,
