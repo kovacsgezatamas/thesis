@@ -1,4 +1,5 @@
 import React from 'react';
+import addDays from 'date-fns/addDays';
 
 import Calendar from '../src';
 
@@ -16,6 +17,21 @@ const Template = (args) => <Calendar {...args} />;
 export const CalendarComponent = Template.bind({});
 CalendarComponent.args = {
   date: new Date(),
+  dateRange: {
+    start: new Date(),
+    end: addDays(new Date(), 4),
+  },
   mode: 'DATE',
+  monthsNumber: 2,
+};
+
+
+export const SelectedDateRange = Template.bind({});
+SelectedDateRange.args = {
+  dateRange: {
+    start: addDays(new Date(), -3),
+    end: addDays(new Date(), 4),
+  },
+  mode: 'DATE_RANGE',
   monthsNumber: 2,
 };

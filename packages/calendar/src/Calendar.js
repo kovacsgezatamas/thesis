@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import isDate from 'date-fns/isDate';
 import addMonths from 'date-fns/addMonths';
 import eachMonthOfInterval from 'date-fns/eachMonthOfInterval';
+import isBefore from 'date-fns/isBefore';
 
 import Month from './Month';
 import * as Styled from './Calendar.styled';
@@ -50,10 +51,12 @@ function Calendar({
   dateRange,
   mode,
   monthsNumber,
+  hasHighlighting,
   onDateChange,
   onDateRangeChange,
 }) {
   const [focusedDate, setFocusedDate] = useState(getFocusedDate(date, dateRange, mode));
+  const [highlighted, setHighlighted] = useState();
 
   function navigateToPrevMonth() {
     if (!isDate(focusedDate)) {
@@ -69,6 +72,68 @@ function Calendar({
     }
 
     setFocusedDate(addMonths(focusedDate, 1));
+  }
+
+  function onDayClick(date) {
+    const dateClone = new Date(date);
+
+    if (mode === calendarMode.DATE) {
+      onDateChange(dateClone);
+      return;
+    }
+
+    if (dateRange?.end || !dateRange?.start) {
+      onDateRangeChange({ start: dateClone });
+      return;
+    }
+
+    let start = dateRange.start;
+    let end = dateClone;
+
+    if (isBefore(end, start)) {
+      [start, end] = [end, start];
+    }
+
+    onDateRangeChange({ start, end });
+
+    if (hasHighlighting) {
+      setHighlighted({ start: new Date(date) });
+    }
+  }
+
+  function onDayMouseEnter(date) {
+    const dateClone = new Date(date);
+
+    if (!hasHighlighting) {
+      return;
+    }
+
+    if (mode === calendarMode.DATE) {
+      setHighlighted({ start: dateClone });
+      return;
+    }
+
+    if (dateRange?.start && !dateRange?.end) {
+      let start = new Date(dateRange.start);
+      let end = dateClone;
+
+      if (isBefore(end, start)) {
+        [start, end] = [end, start];
+      }
+
+      setHighlighted({ start, end });
+      return;
+    }
+
+    setHighlighted({ start: dateClone });
+  }
+
+  function onMonthMouseLeave() {
+    if (!hasHighlighting) {
+      return;
+    }
+
+    setHighlighted(undefined);
   }
 
   if (!focusedDate) {
@@ -93,6 +158,10 @@ function Calendar({
             <Month
               date={date}
               selected={selected}
+              highlighted={highlighted}
+              onDayClick={onDayClick}
+              onDayMouseEnter={onDayMouseEnter}
+              onMouseLeave={onMonthMouseLeave}
               key={date}
             />
           ))
@@ -111,6 +180,7 @@ Calendar.propTypes = {
   }),
   mode: PropTypes.oneOf(['DATE', 'DATE_RANGE']),
   monthsNumber: PropTypes.number,
+  hasHighlighting: PropTypes.bool,
   onDateChange: PropTypes.func,
   onDateRangeChange: PropTypes.func,
 };
@@ -120,6 +190,7 @@ Calendar.defaultProps = {
   dateRange: undefined,
   mode: 'DATE',
   monthsNumber: 2,
+  hasHighlighting: true,
   onDateChange: () => {},
   onDateRangeChange: () => {},
 }

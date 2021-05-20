@@ -11,7 +11,6 @@ const Container = styled.div.attrs(() => ({
 
 const Navigation = styled.div`
   position: relative;
-  height: ${theme.navigationArrowSize};
 `;
 
 const Arrow = styled.em`
@@ -21,6 +20,7 @@ const Arrow = styled.em`
   padding: ${theme.navigationArrowSize};
   cursor: pointer;
   position: absolute;
+  top: 10px;
 
   :hover {
     border: solid ${theme.navigationArrowHoverColor};
