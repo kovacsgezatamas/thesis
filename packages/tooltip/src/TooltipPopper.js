@@ -4,7 +4,7 @@ import useEventListener from '@use-it/event-listener';
 import * as Styled from './Tooltip.styled';
 
 const TooltipPopper = React.forwardRef(
-  ({children, triggerRef, onOutsideClick, ...restProps}, ref) => {
+  ({ children, triggerRef, onOutsideClick, ...restProps }, ref) => {
     const rootElRef = useRef(null);
 
     useEventListener('click', ({ target }) => {

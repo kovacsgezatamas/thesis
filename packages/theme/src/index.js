@@ -11,6 +11,7 @@ import spinner from './spinner';
 import tabs from './tabs';
 import textarea from './textarea';
 import textField from './textField';
+import timeSelector from './timeSelector';
 import toggle from './toggle';
 import tooltip from './tooltip';
 
@@ -28,6 +29,7 @@ export {
   tabs,
   textarea,
   textField,
+  timeSelector,
   toggle,
   tooltip,
 };
