@@ -1,7 +1,7 @@
 {
   "name": "@thesis-ui/calendar",
   "description": "Thesis UI - Calendar component",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "license": "MIT",
   "author": "Geza-Tamas Kovacs <kovacs.geza.tamas@gmail.com>",
   "homepage": "https://github.com/kovacsgezatamas/thesis",
@@ -15,8 +15,8 @@
     "url": "git@github.com:kovacsgezatamas/thesis.git"
   },
   "dependencies": {
-    "@thesis-ui/theme": "^0.0.3",
-    "@thesis-ui/tokens": "^0.0.3",
+    "@thesis-ui/theme": "^0.0.4",
+    "@thesis-ui/tokens": "^0.0.4",
     "date-fns": "2.21.3",
     "memoize-one": "5.2.1"
   },

@@ -1,7 +1,7 @@
 {
   "name": "@thesis-ui/time-selector",
   "description": "Thesis UI - TimeSelector component",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "license": "MIT",
   "author": "Geza-Tamas Kovacs <kovacs.geza.tamas@gmail.com>",
   "homepage": "https://github.com/kovacsgezatamas/thesis",
@@ -16,9 +16,9 @@
   },
   "dependencies": {
     "@popperjs/core": "2.9.2",
-    "@thesis-ui/text-field": "^0.0.3",
-    "@thesis-ui/theme": "^0.0.3",
-    "@thesis-ui/tokens": "^0.0.3",
+    "@thesis-ui/text-field": "^0.0.4",
+    "@thesis-ui/theme": "^0.0.4",
+    "@thesis-ui/tokens": "^0.0.4",
     "dayjs": "1.10.4",
     "react-popper": "2.2.5"
   },
