@@ -205,8 +205,11 @@ function TimeSelector({
   );
 }
 
-TimeSelector.proptypes = {
-  value: PropTypes.instanceOf(Date),
+TimeSelector.propTypes = {
+  value: PropTypes.shape({
+    hours: PropTypes.number,
+    minutes: PropTypes.number,
+  }),
   isSmall: PropTypes.bool,
   isDisabled: PropTypes.bool,
   hasError: PropTypes.bool,

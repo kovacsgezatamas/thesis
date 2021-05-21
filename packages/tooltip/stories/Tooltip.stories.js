@@ -12,8 +12,8 @@ export default {
   argTypes: {
     onShow: { action: 'Tooltip onShow callback' },
     onHide: { action: 'Tooltip onHide callback' },
-   },
-   parameters: {
+  },
+  parameters: {
     chromatic: { delay: 600 },
   },
 };
