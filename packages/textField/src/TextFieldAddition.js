@@ -1,9 +1,9 @@
 import React from 'react';
 import * as Styled from './TextField.styled';
 
-function TextFieldAddition({children}) {
+function TextFieldAddition({ children, ...restProps }) {
   return (
-    <Styled.Addition>
+    <Styled.Addition {...restProps}>
       {children}
     </Styled.Addition>
   );

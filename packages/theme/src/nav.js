@@ -9,7 +9,7 @@ const nav = {
   selectedFontWeight: fontWeight.xxl,
   background: color.white,
   color: color.silverDark30,
-  border: `3px solid ${color.grayLight40}`,
+  border: `4px solid ${color.turquoiseLight20}`,
   width: '240px',
   collapsedWidth: '80px',
 
