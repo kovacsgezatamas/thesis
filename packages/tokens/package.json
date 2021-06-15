@@ -1,7 +1,7 @@
 {
   "name": "@thesis-ui/tokens",
   "description": "Thesis UI - Constants",
-  "version": "0.0.4",
+  "version": "0.1.0",
   "license": "MIT",
   "author": "Geza-Tamas Kovacs <kovacs.geza.tamas@gmail.com>",
   "homepage": "https://github.com/kovacsgezatamas/thesis",
