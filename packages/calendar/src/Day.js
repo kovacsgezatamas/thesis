@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import getDate from 'date-fns/getDate';
-import isToday from 'date-fns/isToday';
 import isWeekend from 'date-fns/isWeekend';
 import isDate from 'date-fns/isDate';
 import startOfDay from 'date-fns/startOfDay';
 import endOfDay from 'date-fns/endOfDay';
 import isWithinInterval from 'date-fns/isWithinInterval';
 import isSameDay from 'date-fns/isSameDay';
+import { isToday } from 'date-fns';
 
 import * as Styled from './Day.styled';
 

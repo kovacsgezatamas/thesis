@@ -1,13 +1,13 @@
 {
   "globalSetup": "<rootDir>/testSetupEnv.js",
   "collectCoverageFrom": [
-    "<rootDir>/packages/**/*.{js,jsx}",
+    "./packages/**/*.{js,jsx}",
     "!**/node_modules/**",
     "!**/lib/**",
     "!**/*.stories.js"
   ],
   "coverageReporters": [
-    "html"
+    "text", "html"
   ],
   "coverageDirectory": "<rootDir>/coverage",
   "coverageThreshold": {

@@ -1,10 +1,117 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<Day /> component should render correctly 1`] = `
+<Container
+  isWeekend={false}
+>
+  4
+</Container>
+`;
+
 exports[`<Day /> component should render correctly for today 1`] = `
 <Container
   isToday={true}
   isWeekend={false}
 >
+  4
+</Container>
+`;
+
+exports[`<Day /> component should render correctly for weekend day 1`] = `
+<Container
+  isWeekend={true}
+>
   17
 </Container>
 `;
+
+exports[`<Day /> component should render correctly if is at the beginning of the highlighted interval 1`] = `
+<Container
+  isWeekend={false}
+>
+  13
+  <Highlight
+    isInInterval={true}
+    isIntervalEnd={false}
+    isIntervalStart={true}
+  />
+</Container>
+`;
+
+exports[`<Day /> component should render correctly if is at the beginning of the selected interval 1`] = `
+<Container
+  isInInterval={true}
+  isIntervalEnd={false}
+  isIntervalStart={true}
+  isWeekend={false}
+>
+  13
+</Container>
+`;
+
+exports[`<Day /> component should render correctly if is at the end of the highlighted interval 1`] = `
+<Container
+  isWeekend={false}
+>
+  13
+  <Highlight
+    isInInterval={true}
+    isIntervalEnd={true}
+    isIntervalStart={false}
+  />
+</Container>
+`;
+
+exports[`<Day /> component should render correctly if is at the end of the selected interval 1`] = `
+<Container
+  isInInterval={true}
+  isIntervalEnd={true}
+  isIntervalStart={false}
+  isWeekend={false}
+>
+  13
+</Container>
+`;
+
+exports[`<Day /> component should render correctly if is in the highlighted interval 1`] = `
+<Container
+  isWeekend={false}
+>
+  13
+  <Highlight
+    isInInterval={true}
+    isIntervalEnd={false}
+    isIntervalStart={false}
+  />
+</Container>
+`;
+
+exports[`<Day /> component should render correctly if is in the selected and highlighted interval 1`] = `
+<Container
+  isInInterval={true}
+  isIntervalEnd={false}
+  isIntervalStart={false}
+  isWeekend={false}
+>
+  13
+  <Highlight
+    isInInterval={true}
+    isIntervalEnd={false}
+    isIntervalStart={false}
+    isSelectionStart={false}
+  />
+</Container>
+`;
+
+exports[`<Day /> component should render correctly if is in the selected interval 1`] = `
+<Container
+  isInInterval={true}
+  isIntervalEnd={false}
+  isIntervalStart={false}
+  isWeekend={false}
+>
+  13
+</Container>
+`;
+
+exports[`<Day /> component should render empty container if the date prop is not sent 1`] = `<Container />`;
