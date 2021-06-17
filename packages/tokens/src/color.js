@@ -20,7 +20,7 @@ const baseColors = [
   { name: 'skyBlue', hex: '#87CEEB' },
   { name: 'dodgerBlue', hex: '#1E90FF' },
   { name: 'midnightBlue', hex: '#191970' },
-  { name: 'turquoise', hex: '#40E0D0' },
+  { name: 'turquoise', hex: '#888' },
   { name: 'paleGreen', hex: '#98FB98' },
   { name: 'seaGreen', hex: '#2E8B57' },
   { name: 'orange', hex: '#FFA500' },
