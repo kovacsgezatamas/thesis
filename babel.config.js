@@ -5,6 +5,7 @@ module.exports = function configBabel(api) {
     presets: [
       '@babel/preset-env',
       '@babel/preset-react',
+      'minify',
     ],
     plugins: [],
   }

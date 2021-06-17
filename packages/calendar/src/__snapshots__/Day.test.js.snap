@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Day /> component should render correctly for today 1`] = `
+<Container
+  isToday={true}
+  isWeekend={false}
+>
+  17
+</Container>
+`;

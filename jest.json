@@ -1,0 +1,31 @@
+{
+  "globalSetup": "<rootDir>/testSetupEnv.js",
+  "collectCoverageFrom": [
+    "<rootDir>/packages/**/*.{js,jsx}",
+    "!**/node_modules/**",
+    "!**/lib/**",
+    "!**/*.stories.js"
+  ],
+  "coverageReporters": [
+    "html"
+  ],
+  "coverageDirectory": "<rootDir>/coverage",
+  "coverageThreshold": {
+    "global": {
+      "branches": 0,
+      "functions": 0,
+      "lines": 0,
+      "statements": 0
+    }
+  },
+  "resetModules": true,
+  "setupFilesAfterEnv": ["<rootDir>/testSetup.js"],
+  "testMatch": ["**/?(*.)(test).js?(x)"],
+  "testPathIgnorePatterns": [
+    "node_modules/",
+    "lib/"
+  ],
+  "verbose": true,
+  "testURL": "http://localhost",
+  "snapshotSerializers": ["enzyme-to-json/serializer"]
+}
