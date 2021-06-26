@@ -9,8 +9,8 @@ export default {
 
 const Template = (args) => <Checkbox {...args} />;
 
-export const CheckboxComponent = Template.bind({});
-CheckboxComponent.args = {
+export const Component = Template.bind({});
+Component.args = {
   isChecked: false,
   isIndeterminate: false,
   isDisabled: false,

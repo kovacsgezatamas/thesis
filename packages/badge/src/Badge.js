@@ -17,15 +17,30 @@ function Badge({ isSecondary, isSmall, isInner, position, children }) {
 }
 
 Badge.propTypes = {
+  /**
+   * Use secondary color instead of the default
+   */
   isSecondary: PropTypes.bool,
+  /**
+   * Flag to switch to small size
+   */
   isSmall: PropTypes.bool,
+  /**
+   * Position the element inside the container
+   */
   isInner: PropTypes.bool,
+  /**
+   * Badge position related to the container element
+   */
   position: PropTypes.oneOf([
     'topRight',
     'topLeft',
     'bottomRight',
     'bottomLeft',
   ]),
+  /**
+   * Renderable content inside the badge bullet
+   */
   children: PropTypes.any,
 };
 

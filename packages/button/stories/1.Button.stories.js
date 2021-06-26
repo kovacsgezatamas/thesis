@@ -9,8 +9,8 @@ export default {
 
 const Template = (args) => <Button {...args} />;
 
-export const ButtonComponent = Template.bind({});
-ButtonComponent.args = {
+export const Component = Template.bind({});
+Component.args = {
   children: 'Thesis Button',
 };
 

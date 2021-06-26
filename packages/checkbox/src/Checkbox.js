@@ -36,12 +36,33 @@ function Checkbox({
 }
 
 Checkbox.propTypes = {
+  /**
+   * Checked state of the component
+   */
   isChecked: PropTypes.bool,
+  /**
+   * Indeterminate state of the component
+   */
   isIndeterminate: PropTypes.bool,
+  /**
+   * Set the checkbox component into disabled state
+   */
   isDisabled: PropTypes.bool,
+  /**
+   * Display the error state and theme of the component
+   */
   hasError: PropTypes.bool,
+  /**
+   * Native checkbox element value
+   */
   value: PropTypes.string,
+  /**
+   * Checkbox label text
+   */
   labelValue: PropTypes.string,
+  /**
+   * Checkbox change callback function
+   */
   onChange: PropTypes.func,
 };
 

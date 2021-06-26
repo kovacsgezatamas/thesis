@@ -18,10 +18,25 @@ const Button = React.forwardRef(
 );
 
 Button.propTypes = {
+  /**
+   * Use the secondary colors for the component
+   */
   isSecondary: PropTypes.bool,
+  /**
+   * Flag to switch to small size
+   */
   isSmall: PropTypes.bool,
+  /**
+   * Set the button component into disabled state
+   */
   isDisabled: PropTypes.bool,
+  /**
+   * Button label, text rendered inside the button
+   */
   children: PropTypes.string.isRequired,
+  /**
+   * Click callback function
+   */
   onClick: PropTypes.func,
 };
 

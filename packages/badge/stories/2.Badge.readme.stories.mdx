@@ -1,0 +1,23 @@
+import {
+  Story,
+  ArgsTable,
+  Description,
+  Meta,
+} from "@storybook/addon-docs/blocks"
+
+import Readme from '../README.md';
+import Badge from '../src';
+
+<Meta title="Components/Badge/Readme" />
+
+<Description markdown={Readme} />
+
+<br />
+
+## Props (interface)
+
+<ArgsTable of={Badge} />
+
+## Demo
+
+<Story id="components-badge--primary-top-left" />

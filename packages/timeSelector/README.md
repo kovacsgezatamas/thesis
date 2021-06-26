@@ -19,8 +19,8 @@ import TimeSelector from '@thesis-ui/time-selector';
 const [time, setTime] = useState();
 
 function onChange(newTime) {
-    setTime(newTime);
-  }
+  setTime(newTime);
+}
 
 <TimeSelector
   value={time}

@@ -30,4 +30,8 @@ const Backdrop = styled.div.attrs(() => ({
 
 Backdrop.displayName = 'Backdrop';
 
+Backdrop.propTypes = {};
+
+Backdrop.defaultProps = {};
+
 export default Backdrop;

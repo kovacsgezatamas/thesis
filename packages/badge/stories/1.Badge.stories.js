@@ -10,8 +10,8 @@ export default {
 
 const Template = (args) => <BadgeHelper><Badge {...args} /></BadgeHelper>;
 
-export const BadgeComponent = Template.bind({});
-BadgeComponent.args = {
+export const Component = Template.bind({});
+Component.args = {
   children: '10',
 };
 

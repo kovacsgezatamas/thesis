@@ -19,11 +19,11 @@ const Template = ({ isVisible }) =>(
   </BackdropHelper>
 );
 
-export const BackdropComponent = Template.bind({});
-BackdropComponent.args = {
+export const Component = Template.bind({});
+Component.args = {
   isVisible: true,
 };
-BackdropComponent.parameters = {
+Component.parameters = {
   chromatic: { delay: 1500 },
 };
 

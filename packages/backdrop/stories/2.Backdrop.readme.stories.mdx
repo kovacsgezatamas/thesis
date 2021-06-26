@@ -1,0 +1,27 @@
+import {
+  Meta,
+  Story,
+  ArgsTable,
+  Description,
+} from '@storybook/addon-docs/blocks';
+
+import Readme from '../README.md';
+import Backdrop from '../src';
+
+<Meta title="Components/Backdrop/Readme" />
+
+<Description markdown={Readme} />
+
+<br />
+
+## Demo
+
+<div
+  style={{
+    border: '1px solid rgba(0, 0, 0, 0.1)',
+    position: 'relative',
+    height: '300px',
+  }}
+>
+  <Story id="components-backdrop--component" />
+</div>

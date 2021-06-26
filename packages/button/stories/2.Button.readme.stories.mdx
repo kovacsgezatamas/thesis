@@ -1,0 +1,23 @@
+import {
+  Story,
+  ArgsTable,
+  Description,
+  Meta,
+} from "@storybook/addon-docs/blocks"
+
+import Readme from '../README.md';
+import Button from '../src';
+
+<Meta title="Components/Button/Readme" />
+
+<Description markdown={Readme} />
+
+<br />
+
+## Props (interface)
+
+<ArgsTable of={Button} />
+
+## Demo
+
+<Story id="components-button--component" />

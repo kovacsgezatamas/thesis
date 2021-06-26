@@ -12,6 +12,7 @@ function SwitchBase({
   ...restProps
 }) {
   function onInputCheckedChange(event) {
+    console.log('asd1234');
     event.stopPropagation();
 
     onChange(value);
@@ -24,6 +25,7 @@ function SwitchBase({
           checked={isChecked}
           disabled={isDisabled}
           value={value}
+          type="checkbox"
           onChange={onInputCheckedChange}
         />
         {icon}
