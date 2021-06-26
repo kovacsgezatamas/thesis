@@ -12,13 +12,32 @@ function Modal({ targetEl, ...restProps }) {
 }
 
 Modal.propTypes = {
+  /**
+   * Close the modal when the Esc key is pressed
+   */
   shouldCloseOnEsc: PropTypes.bool,
+  /**
+   * Close the modal when the backdrop (overlay) is clicked
+   */
   shouldCloseOnBackdropClick: PropTypes.bool,
+  /**
+   * Fixed width of the modal container
+   */
   staticWidth: PropTypes.string,
+  /**
+   * Fixed height of the modal container
+   */
   staticHeight: PropTypes.string,
+  /**
+   * Container of the modal DOMElement.
+   * Default to the <body> DOMElement
+   */
   targetEl: PropTypes.object,
+  /**
+   * Close callback triggered by the eck keypress or backdrop click, if they are enabled
+   */
   onClose: PropTypes.func,
-}
+};
 
 Modal.defaultProps = {
   shouldCloseOnEsc: true,
@@ -27,6 +46,6 @@ Modal.defaultProps = {
   staticHeight: undefined,
   targetEl: window.document.body,
   onClose: () => {},
-}
+};
 
 export default Modal;

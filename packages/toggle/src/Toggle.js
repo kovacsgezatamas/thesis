@@ -34,11 +34,29 @@ function Toggle({
 }
 
 Toggle.propTypes = {
+  /**
+   * Checked state of the component
+   */
   isChecked: PropTypes.bool,
+  /**
+   * Set the toggle component into disabled state
+   */
   isDisabled: PropTypes.bool,
+  /**
+   * Display the error state and theme of the component
+   */
   hasError: PropTypes.bool,
+  /**
+   * Native checkbox element value
+   */
   value: PropTypes.string,
+  /**
+   * Toggle label text
+   */
   labelValue: PropTypes.string,
+  /**
+   * Change callback function
+   */
   onChange: PropTypes.func,
 };
 

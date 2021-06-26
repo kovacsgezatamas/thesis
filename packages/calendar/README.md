@@ -13,7 +13,7 @@ $ npm install @thesis-ui/calendar
 
 ## Usage
 
-```js
+```jsx
 import Calendar from '@thesis-ui/calendar';
 
 const [date, setDate] = useState();
@@ -21,7 +21,7 @@ const [date, setDate] = useState();
 <Calendar
   date={date}
   mode="DATE"
-  monthsNumber={1}
+  monthsNumber={2}
   onDateChange={setDate}
 />
 ```

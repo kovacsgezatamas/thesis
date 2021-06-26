@@ -13,7 +13,7 @@ $ npm install @thesis-ui/tooltip
 
 ## Usage
 
-```js
+```jsx
 import Tooltip from '@thesis-ui/tooltip';
 import Button from '@thesis-ui/button';
 

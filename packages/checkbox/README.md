@@ -13,7 +13,7 @@ $ npm install @thesis-ui/checkbox
 
 ## Usage
 
-```js
+```jsx
 import Checkbox from '@thesis-ui/checkbox';
 
 const [isChecked, setIsChecked] = useState(false);

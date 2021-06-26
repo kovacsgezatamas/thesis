@@ -13,7 +13,7 @@ $ npm install @thesis-ui/badge
 
 ## Usage
 
-```js
+```jsx
 import Badge from '@thesis-ui/badge';
 
 <AnyContainer>

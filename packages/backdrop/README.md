@@ -13,7 +13,7 @@ $ npm install @thesis-ui/backdrop
 
 ## Usage
 
-```js
+```jsx
 import Backdrop from '@thesis-ui/backdrop';
 
 <Backdrop />

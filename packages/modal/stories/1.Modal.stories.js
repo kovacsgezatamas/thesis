@@ -43,14 +43,14 @@ const Template = ({ isVisible, onClose, ...args }) =>(
   </ModalHelper>
 );
 
-export const ModalComponent = Template.bind({});
-ModalComponent.args = {
+export const Component = Template.bind({});
+Component.args = {
   isVisible: true,
   shouldCloseOnEsc: true,
   shouldCloseOnBackdropClick: true,
   staticWidth: '',
   staticHeight: '',
 };
-ModalComponent.parameters = {
+Component.parameters = {
   chromatic: { delay: 1500 },
 };

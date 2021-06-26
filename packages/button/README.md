@@ -13,7 +13,7 @@ $ npm install @thesis-ui/button
 
 ## Usage
 
-```js
+```jsx
 import Button from '@thesis-ui/button';
 
 <Button

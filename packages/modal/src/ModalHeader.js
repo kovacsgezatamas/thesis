@@ -21,7 +21,14 @@ function ModalHeader({
 }
 
 ModalHeader.propTypes = {
+  /**
+   * Content to be rendered in the modal header
+   */
   children: PropTypes.node,
+  /**
+   * Callback executed when the X icon is clicked.
+   * <br />If the function is not present (is falsy) the X icon in Header is not visible
+   */
   onClose: PropTypes.func,
 };
 

@@ -1,0 +1,22 @@
+import { Story, ArgsTable, Description, Meta } from "@storybook/addon-docs/blocks"
+
+import Readme from '../README.md';
+import Modal, { ModalHeader, ModalFooter } from '../src';
+
+<Meta title="Components/Modal/Readme" />
+
+<Description markdown={Readme} />
+
+<br />
+
+## Props (interface)
+
+### ModalHeader
+
+<ArgsTable of={ModalHeader} />
+
+## Demo
+
+<div style={{ position: 'relative' }}>
+  <Story id="components-modal--component" />
+</div>

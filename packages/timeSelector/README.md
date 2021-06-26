@@ -13,7 +13,7 @@ $ npm install @thesis-ui/time-selector
 
 ## Usage
 
-```js
+```jsx
 import TimeSelector from '@thesis-ui/time-selector';
 
 const [time, setTime] = useState();

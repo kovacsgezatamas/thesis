@@ -9,8 +9,8 @@ export default {
 
 const Template = (args) => <Toggle {...args} />;
 
-export const ToggleComponent = Template.bind({});
-ToggleComponent.args = {
+export const Component = Template.bind({});
+Component.args = {
   isChecked: false,
   isDisabled: false,
   hasError: false,
