@@ -8,7 +8,7 @@
     "text field",
     "TextField"
   ],
-  "version": "0.2.0",
+  "version": "0.2.1",
   "license": "MIT",
   "author": "Geza-Tamas Kovacs <kovacs.geza.tamas@gmail.com>",
   "homepage": "https://github.com/kovacsgezatamas/thesis",
@@ -22,8 +22,8 @@
     "url": "git@github.com:kovacsgezatamas/thesis.git"
   },
   "dependencies": {
-    "@thesis-ui/theme": "^0.2.0",
-    "@thesis-ui/tokens": "^0.2.0"
+    "@thesis-ui/theme": "^0.2.1",
+    "@thesis-ui/tokens": "^0.2.1"
   },
   "peerDependencies": {
     "react": "17.0.1",
