@@ -1,7 +1,7 @@
 {
   "name": "@thesis-ui/theme",
   "description": "Thesis UI - Theme",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "license": "MIT",
   "author": "Geza-Tamas Kovacs <kovacs.geza.tamas@gmail.com>",
   "homepage": "https://github.com/kovacsgezatamas/thesis",
@@ -15,7 +15,7 @@
     "url": "git@github.com:kovacsgezatamas/thesis.git"
   },
   "dependencies": {
-    "@thesis-ui/tokens": "^0.1.0"
+    "@thesis-ui/tokens": "^0.2.0"
   },
   "gitHead": "3c2c336cf9d32f418acedf05b1e3c6074f4d5123",
   "publishConfig": {
