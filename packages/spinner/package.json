@@ -1,6 +1,12 @@
 {
   "name": "@thesis-ui/spinner",
   "description": "Thesis UI - Spinner component",
+  "keywords": [
+    "thesis-ui",
+    "UI component",
+    "React",
+    "spinner"
+  ],
   "version": "0.2.0",
   "license": "MIT",
   "author": "Geza-Tamas Kovacs <kovacs.geza.tamas@gmail.com>",

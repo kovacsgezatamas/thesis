@@ -1,6 +1,12 @@
 {
   "name": "@thesis-ui/loader",
   "description": "Thesis UI - Loader component",
+  "keywords": [
+    "thesis-ui",
+    "UI component",
+    "React",
+    "loader"
+  ],
   "version": "0.2.0",
   "license": "MIT",
   "author": "Geza-Tamas Kovacs <kovacs.geza.tamas@gmail.com>",

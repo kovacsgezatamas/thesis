@@ -1,6 +1,13 @@
 {
   "name": "@thesis-ui/text-field",
   "description": "Thesis UI - TextField component",
+  "keywords": [
+    "thesis-ui",
+    "UI component",
+    "React",
+    "text field",
+    "TextField"
+  ],
   "version": "0.2.0",
   "license": "MIT",
   "author": "Geza-Tamas Kovacs <kovacs.geza.tamas@gmail.com>",

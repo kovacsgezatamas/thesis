@@ -1,6 +1,12 @@
 {
   "name": "@thesis-ui/tooltip",
   "description": "Thesis UI - Tooltip component",
+  "keywords": [
+    "thesis-ui",
+    "UI component",
+    "React",
+    "tooltip"
+  ],
   "version": "0.2.0",
   "license": "MIT",
   "author": "Geza-Tamas Kovacs <kovacs.geza.tamas@gmail.com>",

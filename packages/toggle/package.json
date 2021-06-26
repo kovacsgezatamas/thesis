@@ -1,6 +1,12 @@
 {
   "name": "@thesis-ui/toggle",
   "description": "Thesis UI - Toggle component",
+  "keywords": [
+    "thesis-ui",
+    "UI component",
+    "React",
+    "toggle"
+  ],
   "version": "0.2.0",
   "license": "MIT",
   "author": "Geza-Tamas Kovacs <kovacs.geza.tamas@gmail.com>",

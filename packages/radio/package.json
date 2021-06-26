@@ -1,6 +1,12 @@
 {
   "name": "@thesis-ui/radio",
   "description": "Thesis UI - Radio component",
+  "keywords": [
+    "thesis-ui",
+    "UI component",
+    "React",
+    "radio"
+  ],
   "version": "0.2.0",
   "license": "MIT",
   "author": "Geza-Tamas Kovacs <kovacs.geza.tamas@gmail.com>",

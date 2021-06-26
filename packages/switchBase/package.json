@@ -1,6 +1,13 @@
 {
   "name": "@thesis-ui/switch-base",
   "description": "Thesis UI - Switch Base component",
+  "keywords": [
+    "thesis-ui",
+    "UI component",
+    "React",
+    "switch base",
+    "SwitchBase"
+  ],
   "version": "0.2.0",
   "license": "MIT",
   "author": "Geza-Tamas Kovacs <kovacs.geza.tamas@gmail.com>",

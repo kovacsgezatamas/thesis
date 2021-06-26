@@ -1,6 +1,12 @@
 {
   "name": "@thesis-ui/checkbox",
   "description": "Thesis UI - Checkbox component",
+  "keywords": [
+    "thesis-ui",
+    "UI component",
+    "React",
+    "checkbox"
+  ],
   "version": "0.2.0",
   "license": "MIT",
   "author": "Geza-Tamas Kovacs <kovacs.geza.tamas@gmail.com>",

@@ -1,6 +1,13 @@
 {
   "name": "@thesis-ui/tokens",
   "description": "Thesis UI - Constants",
+  "keywords": [
+    "thesis-ui",
+    "UI component",
+    "React",
+    "tokens",
+    "design tokens"
+  ],
   "version": "0.2.0",
   "license": "MIT",
   "author": "Geza-Tamas Kovacs <kovacs.geza.tamas@gmail.com>",
