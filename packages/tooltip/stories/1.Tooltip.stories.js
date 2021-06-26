@@ -26,8 +26,8 @@ const TooltipTemplate = (args) => (
   </TooltipHelper>
 );
 
-export const TooltipComponent = TooltipTemplate.bind({});
-TooltipComponent.args = {
+export const Component = TooltipTemplate.bind({});
+Component.args = {
   title: SAMPLE_SHORT_TEXT.substr(0, 100),
 };
 

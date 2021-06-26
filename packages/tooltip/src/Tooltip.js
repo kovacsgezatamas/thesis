@@ -109,8 +109,19 @@ function Tooltip({
 }
 
 Tooltip.propTypes = {
+  /**
+   * Text to show inside the tooltip
+   */
   title: PropTypes.node.isRequired,
+  /**
+   * Element triggering the tooltip
+   */
   children: PropTypes.node.isRequired,
+  /**
+   * Preferred position of the tooltip.
+   * If there is not enough space to show in the preferred position,
+   * a new position will be selected
+   */
   position: PropTypes.oneOf([
     'auto',
     'auto-start',
@@ -128,10 +139,26 @@ Tooltip.propTypes = {
     'left-start',
     'left-end',
   ]),
+  /**
+   * Container of the tooltip DOMElement.
+   * If not present, the tooltip will be rendered in DOM as a sibling, right after of the trigger element
+   */
   targetEl: PropTypes.element,
+  /**
+   * Show callback function
+   */
   onShow: PropTypes.func,
+  /**
+   * Hide callback function
+   */
   onHide: PropTypes.func,
+  /**
+   * The tooltip is always visible and linked to the trigger element.
+   */
   isAlwaysOpen: PropTypes.bool,
+  /**
+   * Instead of hover, the tooltip will be shown on click event on the trigger element
+   */
   shouldShowOnClick: PropTypes.bool,
 };
 
