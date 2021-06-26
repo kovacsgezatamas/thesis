@@ -14,8 +14,8 @@ export default {
 
 const Template = (args) => <Calendar {...args} />;
 
-export const CalendarComponent = Template.bind({});
-CalendarComponent.args = {
+export const Component = Template.bind({});
+Component.args = {
   date: new Date(),
   dateRange: {
     start: new Date(),

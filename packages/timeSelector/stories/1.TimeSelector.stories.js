@@ -17,8 +17,8 @@ const Template = (args) => (
   </TimeSelectorHelper>
 );
 
-export const TimeSelectorComponent = Template.bind({});
-TimeSelectorComponent.args = {
+export const Component = Template.bind({});
+Component.args = {
   placeholder: 'Time Selector'
 };
 

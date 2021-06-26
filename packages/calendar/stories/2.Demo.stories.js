@@ -3,7 +3,7 @@ import format from 'date-fns/format';
 import Calendar from '../src';
 
 export default {
-  title: 'Components/Calendar/Demo',
+  title: 'Components/Calendar/ComponentDemo',
 };
 
 export const DateSelection = (args) => {

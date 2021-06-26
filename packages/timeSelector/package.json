@@ -1,6 +1,7 @@
 {
   "name": "@thesis-ui/time-selector",
   "description": "Thesis UI - TimeSelector component",
+  "keywords": ["thesis-ui", "UI component", "React", "TimeSelector", "time selector"],
   "version": "0.1.0",
   "license": "MIT",
   "author": "Geza-Tamas Kovacs <kovacs.geza.tamas@gmail.com>",

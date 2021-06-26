@@ -173,15 +173,36 @@ function Calendar({
 }
 
 Calendar.propTypes = {
+  /**
+   * Selected date (for "DATE" mode)
+   */
   date: PropTypes.instanceOf(Date),
+  /**
+   * Selected date range (for "DATE_RANGE" mode)
+   */
   dateRange: PropTypes.shape({
     start: PropTypes.instanceOf(Date),
     end: PropTypes.instanceOf(Date),
   }),
+  /**
+   * Usage mode of the Calendar component. Can be "DATE" or "DATE_RANGE".
+   */
   mode: PropTypes.oneOf(['DATE', 'DATE_RANGE']),
+  /**
+   * The number of visible months
+   */
   monthsNumber: PropTypes.number,
+  /**
+   * Activates/deactivates the highlighting functionality during the selection
+   */
   hasHighlighting: PropTypes.bool,
+  /**
+   * Callback for selected date change action (for "DATE" mode)
+   */
   onDateChange: PropTypes.func,
+  /**
+   * Callback for selected date range change action (for "DATE_RANGE" mode)
+   */
   onDateRangeChange: PropTypes.func,
 };
 

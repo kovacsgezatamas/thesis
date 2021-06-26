@@ -1,6 +1,7 @@
 {
   "name": "@thesis-ui/calendar",
   "description": "Thesis UI - Calendar component",
+  "keywords": ["thesis-ui", "UI component", "React", "calendar"],
   "version": "0.1.0",
   "license": "MIT",
   "author": "Geza-Tamas Kovacs <kovacs.geza.tamas@gmail.com>",

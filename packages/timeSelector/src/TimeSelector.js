@@ -206,16 +206,42 @@ function TimeSelector({
 }
 
 TimeSelector.propTypes = {
+  /**
+   * Selected time value (hour and minutes)
+   */
   value: PropTypes.shape({
     hours: PropTypes.number,
     minutes: PropTypes.number,
   }),
+  /**
+   * Input size (small or normal)
+   */
   isSmall: PropTypes.bool,
+  /**
+   * Flag to tell the component the disabled state
+   * Will disable the input and will not show the dropdown
+   */
   isDisabled: PropTypes.bool,
+  /**
+   * Force error state of the component
+   */
   hasError: PropTypes.bool,
+  /**
+   * Set the input required
+   */
   isRequired: PropTypes.bool,
+  /**
+   * Placeholder text if the time selector input
+   */
   placeholder: PropTypes.string,
+  /**
+   * The formatter string of the time.
+   * Symbols from unicode.org: https://www.unicode.org/reports/tr35/tr35-dates.html#Date_Field_Symbol_Table
+   */
   timeFormat: PropTypes.string,
+  /**
+   * Selected time change callback function
+   */
   onChange: PropTypes.func,
 };
 

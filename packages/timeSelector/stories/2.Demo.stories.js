@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import TimeSelector from '../src';
 
 export default {
-  title: 'Components/TimeSelector/Demo',
+  title: 'Components/TimeSelector/ComponentDemo',
 };
 
 export const TimeSelection = (args) => {
